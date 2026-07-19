@@ -3,44 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katalog Produk Pupuk</title>
+    <title>Toko Pupuk Kita - Katalog Produk Terlengkap</title>
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (Untuk ikon pelengkap) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-green: #2e7d32;
+            --light-green: #edf7ed;
+        }
+        .bg-gradient-green {
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+        }
+        .btn-green {
+            background-color: var(--primary-green);
+            color: white;
+        }
+        .btn-green:hover {
+            background-color: #1b5e20;
+            color: white;
+        }
+        .product-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e0e0e0;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+        .product-img {
+            height: 200px;
+            object-fit: cover;
+            background-color: #f5f5f5;
+        }
+    </style>
 </head>
 <body class="bg-light">
 
-    <nav class="navbar navbar-dark bg-primary mb-5">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-green sticky-top shadow-sm">
         <div class="container">
-            <span class="navbar-brand mb-0 h1">Toko Pupuk Kita</span>
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-tree-fill me-2"></i>Toko Pupuk Kita
+            </a>
+            <span class="navbar-text text-white-50 d-none d-md-block">
+                Solusi Pertanian Subur & Makmur
+            </span>
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row">
+    <!-- HERO SECTION -->
+    <header class="py-5 mb-5 bg-gradient-green text-white text-center position-relative overflow-hidden">
+        <div class="container position-relative z-1 py-4">
+            <h1 class="display-4 fw-bold mb-3">Katalog Pupuk Berkualitas Tinggi</h1>
+            <p class="lead mb-4 text-white-50">Tingkatkan hasil panen Anda dengan pilihan pupuk organik dan non-organik terbaik.</p>
+            <a href="#katalog" class="btn btn-light btn-lg px-4 fw-semibold text-success shadow-sm">Lihat Produk</a>
+        </div>
+        <!-- Ornamen estetik di background -->
+        <div class="position-absolute top-50 start-50 translate-middle text-white opacity-25" style="font-size: 20rem; z-index: 0; pointer-events: none;">
+            <i class="bi bi-flower1"></i>
+        </div>
+    </header>
+
+    <!-- UTAMA: KATALOG PRODUK -->
+    <main class="container mb-5" id="katalog">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-dark">Produk Unggulan Kami</h2>
+            <p class="text-muted">Pilih jenis pupuk yang sesuai dengan kebutuhan tanaman Anda</p>
+            <hr class="mx-auto" style="width: 60px; height: 3px; background-color: var(--primary-green); opacity: 1;">
+        </div>
+
+        <div class="row g-4">
             
-            <!-- AREA PRODUK: Kamu bisa copy-paste blok di bawah ini untuk produk baru -->
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Pupuk NPK 16-16-16</h5>
-                        <p class="card-text text-muted">Pupuk majemuk untuk pertumbuhan optimal tanaman padi dan jagung.</p>
-                        <button class="btn btn-outline-primary w-100">Lihat Detail</button>
+            <!-- PRODUK 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm product-card border-0 rounded-3 overflow-hidden">
+                    <!-- Badge Kategori -->
+                    <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 m-3 rounded-pill fs-7 fw-semibold shadow-sm">Terlaris</span>
+                    <!-- Gambar Produk (Menggunakan placeholder alam/tanaman dari Unsplash) -->
+                    <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=500&q=80" class="card-img-top product-img" alt="Pupuk NPK">
+                    <div class="card-body d-flex flex-column p-4">
+                        <span class="text-success fw-bold small text-uppercase mb-1">Pupuk Kimia</span>
+                        <h5 class="card-title fw-bold text-dark mb-2">Pupuk NPK 16-16-16</h5>
+                        <p class="card-text text-muted flex-grow-1 fs-6">Pupuk majemuk seimbang untuk memicu pertumbuhan optimal pada tanaman padi, jagung, dan hortikultura.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <div>
+                                <span class="text-muted d-block small">Harga / Karung</span>
+                                <span class="fw-bold text-success fs-5">Rp 175.000</span>
+                            </div>
+                            <a href="https://wa.me/628123456789?text=Halo%20Toko%20Pupuk%20Kita,%20saya%20mau%20tanya%20Pupuk%20NPK" target="_blank" class="btn btn-green rounded-pill px-3">
+                                <i class="bi bi-whatsapp me-2"></i>Beli
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Pupuk Organik Cair</h5>
-                        <p class="card-text text-muted">Nutrisi organik untuk meningkatkan kualitas tanah secara alami.</p>
-                        <button class="btn btn-outline-primary w-100">Lihat Detail</button>
+            <!-- PRODUK 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm product-card border-0 rounded-3 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=500&q=80" class="card-img-top product-img" alt="Pupuk Organik">
+                    <div class="card-body d-flex flex-column p-4">
+                        <span class="text-success fw-bold small text-uppercase mb-1">Pupuk Organik</span>
+                        <h5 class="card-title fw-bold text-dark mb-2">Pupuk Organik Cair (POC)</h5>
+                        <p class="card-text text-muted flex-grow-1 fs-6">Nutrisi cair alami untuk memperbaiki struktur tanah mikro, merangsang akar, dan aman bagi lingkungan.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <div>
+                                <span class="text-muted d-block small">Harga / Botol</span>
+                                <span class="fw-bold text-success fs-5">Rp 45.000</span>
+                            </div>
+                            <a href="https://wa.me/628123456789?text=Halo%20Toko%20Pupuk%20Kita,%20saya%20mau%20tanya%20Pupuk%20Organik%20Cair" target="_blank" class="btn btn-green rounded-pill px-3">
+                                <i class="bi bi-whatsapp me-2"></i>Beli
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- AKHIR AREA PRODUK -->
+
+            <!-- PRODUK 3 (Tambahan contoh produk baru) -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm product-card border-0 rounded-3 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=500&q=80" class="card-img-top product-img" alt="Pupuk Kompos">
+                    <div class="card-body d-flex flex-column p-4">
+                        <span class="text-success fw-bold small text-uppercase mb-1">Pupuk Organik</span>
+                        <h5 class="card-title fw-bold text-dark mb-2">Super Kompos Matang</h5>
+                        <p class="card-text text-muted flex-grow-1 fs-6">Kompos murni siap pakai hasil fermentasi alami. Sangat baik untuk media tanam pot rumah tangga maupun kebun luas.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <div>
+                                <span class="text-muted d-block small">Harga / Karung</span>
+                                <span class="fw-bold text-success fs-5">Rp 25.000</span>
+                            </div>
+                            <a href="https://wa.me/628123456789?text=Halo%20Toko%20Pupuk%20Kita,%20saya%20mau%20tanya%20Super%20Kompos" target="_blank" class="btn btn-green rounded-pill px-3">
+                                <i class="bi bi-whatsapp me-2"></i>Beli
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
-    </div>
+    </main>
 
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white-50 text-center py-4 border-top border-secondary">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 Toko Pupuk Kita. Hak Cipta Dilindungi.</p>
+            <small>Dibuat dengan <i class="bi bi-heart-fill text-danger"></i> untuk Petani Indonesia</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
