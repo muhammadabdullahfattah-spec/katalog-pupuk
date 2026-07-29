@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Pupuk Kita - Sambirejo</title>
+    <title>Omah Karya Gunung Cilik - Sambirejo</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <!-- Google Fonts untuk Tampilan Serif Elegan -->
+    <!-- Google Fonts untuk Tampilan Modern & Serif Elegan -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
@@ -49,9 +49,9 @@
             text-decoration: underline;
         }
 
-        /* Style khusus untuk Gambar Logo di Navbar */
+        /* Style Gambar Logo di Navbar */
         .nav-logo-img {
-            height: 42px;
+            height: 40px;
             width: auto;
             object-fit: contain;
             background-color: #ffffff;
@@ -60,11 +60,12 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        /* Gambar Ornaments Tepi */
+        /* Gambar Ornament Tepi Decorative */
         .decor-img {
             position: absolute;
             z-index: 1;
             pointer-events: none;
+            opacity: 0.85;
         }
         .decor-cabbage {
             top: 40px;
@@ -82,16 +83,16 @@
             width: 150px;
         }
 
-        /* Icon & Angka 3 Langkah */
+        /* Number Step Icon */
         .step-num {
-            width: 24px;
-            height: 24px;
+            width: 26px;
+            height: 26px;
             border-radius: 50%;
             color: white;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             font-weight: bold;
             margin-bottom: 8px;
         }
@@ -100,18 +101,19 @@
         .bg-green-step { background-color: #2ecc71; }
         .bg-lime { background-color: #8bc34a; }
 
-        /* Card Produk */
+        /* Card Produk Styling */
         .product-card {
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
             border: 1px solid #eeeeee;
         }
         .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08) !important;
         }
         .btn-greeny {
             background-color: var(--primary-green);
             color: white;
+            font-weight: 500;
         }
         .btn-greeny:hover {
             background-color: var(--dark-green);
@@ -125,132 +127,119 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-greeny sticky-top py-2 shadow-sm">
         <div class="container">
             
-            <!-- LOGO AREA: 3 LOGO PENGGANTI GREENY + 1 LOGO SAMBIREJO DI SAMPING -->
+            <!-- BRAND & LOGO AREA -->
             <a class="navbar-brand d-flex align-items-center gap-2 me-4" href="#">
-                <!-- 3 Logo Utama -->
                 <img src="logo-univ.jpg" alt="Logo UGM" class="nav-logo-img">
                 <img src="logo-kknn.jpg" alt="Logo KKN PPM UGM" class="nav-logo-img">
                 <img src="logo-prabaswara.jpg" alt="Logo Prabaswara" class="nav-logo-img">
                 
-                <!-- Pembatas / Separator -->
                 <span class="text-white-50 fs-5 px-1">|</span>
                 
-                <!-- 1 Logo Tambahan di Samping -->
-                <img src="logo-sambi.jpg" alt="Logo Sambirejo Gumregah" class="nav-logo-img">
+                <img src="logo-sambi.jpg" alt="Logo Sambirejo" class="nav-logo-img">
+                <span class="fw-bold fs-6 text-white ms-1 d-none d-sm-inline-block">Omah Karya</span>
             </a>
 
-            <!-- Tombol Toggle Mobile -->
+            <!-- Tombol Mobile Toggle -->
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Navigasi Menu & Pencarian -->
+            <!-- Navigasi Menu -->
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link active rounded-pill px-3 py-1 bg-white text-dark fw-bold me-2" href="#">Home</a>
+                        <a class="nav-link active rounded-pill px-3 py-1 bg-white text-dark fw-bold me-2" href="#">Beranda</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Product</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Pupuk Organik</a></li>
-                            <li><a class="dropdown-item" href="#">Pupuk Anorganik</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#">How to pay</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">How to order</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">More</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-search"></i></a>
+                        <a class="nav-link" href="#katalog">Katalog Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lokasi">Lokasi</a>
                     </li>
                 </ul>
 
-                <!-- Right Menu: Wishlist & Cart -->
-                <div class="d-flex align-items-center gap-3 text-white fs-7">
-                    <a href="#" class="text-white text-decoration-none small">
-                        <i class="bi bi-heart me-1"></i> Wishlist
-                    </a>
-                    <a href="#" class="text-white text-decoration-none small">
-                        <i class="bi bi-cart me-1"></i> Cart <span class="badge bg-dark rounded-circle ms-1">0</span>
-                    </a>
+                <!-- Tag Wilayah -->
+                <div class="d-flex align-items-center text-white small bg-black bg-opacity-10 px-3 py-1 rounded-pill">
+                    <i class="bi bi-geo-alt-fill me-1 text-warning"></i> Padukuhan Gunung Cilik
                 </div>
             </div>
         </div>
     </nav>
 
 
-    <!-- HERO SECTION LAYOUT (DESAIN GREENY) -->
+    <!-- HERO SECTION -->
     <section class="position-relative py-5 overflow-hidden">
         
-        <!-- Gambar Hiasan Tepi -->
+        <!-- Hiasan Samping -->
         <img src="https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?auto=format&fit=crop&w=300&q=80" alt="Cabbage" class="decor-img decor-cabbage d-none d-xl-block">
         <img src="https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?auto=format&fit=crop&w=300&q=80" alt="Cucumber" class="decor-img decor-cucumber d-none d-xl-block">
         <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=300&q=80" alt="Tomato" class="decor-img decor-tomato d-none d-xl-block">
 
         <div class="container text-center position-relative z-2 my-3">
             
-            <!-- Judul Utama -->
-            <h1 class="serif-title display-4 fw-normal mb-3">Delivery Fresh directly to your hand</h1>
+            <!-- Tagline Badge -->
+            <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 rounded-pill px-3 py-2 mb-3 fw-semibold">
+                Inovasi Organik & Karya Kreatif Warga Sambirejo
+            </span>
+            
+            <h1 class="serif-title display-4 fw-bold mb-3">Omah Karya Gunung Cilik</h1>
             <p class="text-muted mx-auto mb-5" style="max-width: 750px; font-size: 0.95rem; line-height: 1.6;">
-                Solusi pupuk terbaik dan nutrisi tanaman berkualitas tinggi langsung untuk memajukan sektor pertanian lokal Desa Sambirejo.
+                Pusat produk unggulan pupuk organik dan lilin aromaterapi buatan tangan warga Padukuhan Gunung Cilik, Kalurahan Sambirejo, Prambanan. Dipersembahkan bersama Tim KKN-PPM UGM untuk mewujudkan ekonomi lokal yang mandiri dan berkelanjutan.
             </p>
 
-            <!-- 3 Langkah Proses (Plant, Online Store, Delivery) -->
+            <!-- 3 Langkah Pemesanan -->
             <div class="row g-4 justify-content-center mt-2 mb-5">
-                
-                <!-- Step 1: Plant -->
                 <div class="col-12 col-md-4" style="max-width: 280px;">
                     <div class="mb-2">
-                        <i class="bi bi-flower2 text-warning fs-1"></i>
+                        <i class="bi bi-box-seam text-warning fs-1"></i>
                     </div>
                     <div>
                         <span class="step-num bg-orange">1</span>
-                        <h5 class="serif-title fw-bold mb-2">Plant</h5>
+                        <h5 class="serif-title fw-bold mb-2">Pilih Produk</h5>
                         <p class="small text-muted" style="font-size: 0.8rem;">
-                            Pilihlah pupuk yang sesuai dengan jenis tanaman untuk hasil panen yang optimal.
+                            Tentukan pupuk organik atau lilin aromaterapi yang sesuai dengan kebutuhan Anda.
                         </p>
                     </div>
                 </div>
 
-                <!-- Step 2: Online Store -->
                 <div class="col-12 col-md-4" style="max-width: 280px;">
                     <div class="mb-2">
-                        <i class="bi bi-cart3 text-success fs-1"></i>
+                        <i class="bi bi-whatsapp text-success fs-1"></i>
                     </div>
                     <div>
                         <span class="step-num bg-green-step">2</span>
-                        <h5 class="serif-title fw-bold mb-2" style="color: var(--primary-green);">Online Store</h5>
+                        <h5 class="serif-title fw-bold mb-2" style="color: var(--primary-green);">Pesan via WA</h5>
                         <p class="small text-muted" style="font-size: 0.8rem;">
-                            Pesan pupuk dan kebutuhan pertanian dengan mudah secara langsung melalui katalog online.
+                            Klik tombol "Beli" untuk terhubung langsung dengan pengelola UMKM warga via WhatsApp.
                         </p>
                     </div>
                 </div>
 
-                <!-- Step 3: Delivery -->
                 <div class="col-12 col-md-4" style="max-width: 280px;">
                     <div class="mb-2">
                         <i class="bi bi-truck text-info fs-1"></i>
                     </div>
                     <div>
                         <span class="step-num bg-lime">3</span>
-                        <h5 class="serif-title fw-bold mb-2" style="color: #8bc34a;">Delivery</h5>
+                        <h5 class="serif-title fw-bold mb-2" style="color: #8bc34a;">Pengiriman</h5>
                         <p class="small text-muted" style="font-size: 0.8rem;">
-                            Produk siap diantar langsung ke tempat Anda secara cepat dan terjamin aman.
+                            Pesanan diproses dan siap dikirimkan ke alamat Anda atau diambil langsung di lokasi.
                         </p>
                     </div>
                 </div>
-
             </div>
 
-            <!-- Bagian Fitur Tambahan: Best Quality Farm -->
-            <div class="mt-5 pt-4">
-                <h2 class="serif-title fw-normal mb-3">Best quality farm bring better products</h2>
+            <!-- Banner Pemberdayaan -->
+            <div class="mt-5 pt-4" id="tentang">
+                <h2 class="serif-title fw-normal mb-3">Dari Warga Gunung Cilik untuk Nusantara</h2>
                 <p class="text-muted mx-auto mb-4" style="max-width: 800px; font-size: 0.88rem; line-height: 1.6;">
-                    Komitmen kami menyajikan produk pendukung pertanian terbaik untuk mewujudkan Sambirejo yang subur, guyup rukun, dan migunani.
+                    Wujud komitmen bersama dalam mengolah potensi desa menjadi produk yang bermanfaat tinggi bagi pertanian sehat dan kenyamanan hunian Anda.
                 </p>
-                <!-- Banner Pemandangan Sawah -->
                 <div class="mx-auto overflow-hidden rounded-3 shadow-sm" style="max-width: 650px;">
-                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80" alt="Farm Landscape" class="img-fluid w-100" style="max-height: 250px; object-fit: cover;">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80" alt="Pemandangan Sambirejo" class="img-fluid w-100" style="max-height: 250px; object-fit: cover;">
                 </div>
             </div>
 
@@ -258,73 +247,75 @@
     </section>
 
 
-    <!-- KATALOG PRODUK -->
+    <!-- KATALOG PRODUK FOKUS (3 PRODUK) -->
     <main class="container my-5 py-4 border-top" id="katalog">
         <div class="text-center mb-5">
-            <h2 class="serif-title fw-bold">Katalog Produk Terlengkap</h2>
-            <p class="text-muted">Pilih jenis pupuk berkualitas untuk menunjang pertanian Anda</p>
+            <h2 class="serif-title fw-bold">Katalog Produk Utama</h2>
+            <p class="text-muted">Produk berkualitas tinggi hasil olahan tangan warga Padukuhan Gunung Cilik</p>
             <hr class="mx-auto" style="width: 50px; height: 3px; background-color: var(--primary-green); opacity: 1;">
         </div>
 
-        <div class="row g-4">
+        <div class="row g-4 justify-content-center">
             
-            <!-- PRODUK 1 -->
+            <!-- PRODUK 1: POC -->
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 product-card border-0 rounded-3 overflow-hidden">
-                    <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 m-3 rounded-pill small fw-semibold shadow-sm">Terlaris</span>
-                    <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Pupuk NPK" style="height: 200px; object-fit: cover;">
+                <div class="card h-100 product-card border-0 rounded-3 overflow-hidden shadow-sm">
+                    <span class="position-absolute top-0 start-0 bg-success text-white px-3 py-1 m-3 rounded-pill small fw-semibold shadow-sm">Organik Alami</span>
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Pupuk Organik Cair" style="height: 220px; object-fit: cover;">
                     <div class="card-body d-flex flex-column p-4">
-                        <span class="text-success fw-bold small text-uppercase mb-1">Pupuk Kimia</span>
-                        <h5 class="card-title fw-bold text-dark mb-2">Pupuk NPK 16-16-16</h5>
-                        <p class="card-text text-muted flex-grow-1 small">Pupuk majemuk seimbang untuk memicu pertumbuhan optimal pada tanaman padi dan hortikultura.</p>
-                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
-                            <div>
-                                <span class="text-muted d-block small">Harga / Karung</span>
-                                <span class="fw-bold text-success fs-5">Rp 175.000</span>
-                            </div>
-                            <a href="https://wa.me/628123456789" target="_blank" class="btn btn-greeny rounded-pill px-3 btn-sm">
-                                <i class="bi bi-whatsapp me-1"></i> Beli
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PRODUK 2 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 product-card border-0 rounded-3 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Pupuk Organik" style="height: 200px; object-fit: cover;">
-                    <div class="card-body d-flex flex-column p-4">
-                        <span class="text-success fw-bold small text-uppercase mb-1">Pupuk Organik</span>
+                        <span class="text-success fw-bold small text-uppercase mb-1">Pertanian Organik</span>
                         <h5 class="card-title fw-bold text-dark mb-2">Pupuk Organik Cair (POC)</h5>
-                        <p class="card-text text-muted flex-grow-1 small">Nutrisi cair alami untuk memperbaiki struktur tanah mikro dan merangsang pertumbuhan akar.</p>
+                        <p class="card-text text-muted flex-grow-1 small">Nutrisi cair kaya mikronutrien dari hasil fermentasi alami. Membantu mempercepat pembungaan, memperkuat akar, dan menjaga kesuburan tanah.</p>
                         <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
                             <div>
-                                <span class="text-muted d-block small">Harga / Botol</span>
-                                <span class="fw-bold text-success fs-5">Rp 45.000</span>
-                            </div>
-                            <a href="https://wa.me/628123456789" target="_blank" class="btn btn-greeny rounded-pill px-3 btn-sm">
-                                <i class="bi bi-whatsapp me-1"></i> Beli
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PRODUK 3 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 product-card border-0 rounded-3 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Pupuk Kompos" style="height: 200px; object-fit: cover;">
-                    <div class="card-body d-flex flex-column p-4">
-                        <span class="text-success fw-bold small text-uppercase mb-1">Pupuk Organik</span>
-                        <h5 class="card-title fw-bold text-dark mb-2">Super Kompos Matang</h5>
-                        <p class="card-text text-muted flex-grow-1 small">Kompos murni siap pakai hasil fermentasi alami, sangat baik untuk media tanam pot maupun kebun.</p>
-                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
-                            <div>
-                                <span class="text-muted d-block small">Harga / Karung</span>
+                                <span class="text-muted d-block small">Kemasan / Botol</span>
                                 <span class="fw-bold text-success fs-5">Rp 25.000</span>
                             </div>
-                            <a href="https://wa.me/628123456789" target="_blank" class="btn btn-greeny rounded-pill px-3 btn-sm">
+                            <a href="https://wa.me/6281294202728?text=Halo%20Admin%20Omah%20Karya%20Gunung%20Cilik,%20saya%20ingin%20membeli%20Pupuk%20Organik%20Cair%20(POC)." target="_blank" class="btn btn-greeny rounded-pill px-3 btn-sm">
+                                <i class="bi bi-whatsapp me-1"></i> Beli
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUK 2: PUPUK PADAT -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 product-card border-0 rounded-3 overflow-hidden shadow-sm">
+                    <span class="position-absolute top-0 start-0 bg-warning text-dark px-3 py-1 m-3 rounded-pill small fw-semibold shadow-sm">Best Seller</span>
+                    <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Pupuk Organik Padat" style="height: 220px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column p-4">
+                        <span class="text-success fw-bold small text-uppercase mb-1">Media Tanam</span>
+                        <h5 class="card-title fw-bold text-dark mb-2">Pupuk Organik Padat</h5>
+                        <p class="card-text text-muted flex-grow-1 small">Kompos matang siap pakai yang kaya unsur hara makro & mikro. Sangat efektif memperbaiki struktur tanah yang tandus dan menutrisi tanaman.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <div>
+                                <span class="text-muted d-block small">Kemasan / Karung</span>
+                                <span class="fw-bold text-success fs-5">Rp 20.000</span>
+                            </div>
+                            <a href="https://wa.me/6281294202728?text=Halo%20Admin%20Omah%20Karya%20Gunung%20Cilik,%20saya%20ingin%20membeli%20Pupuk%20Organik%20Padat." target="_blank" class="btn btn-greeny rounded-pill px-3 btn-sm">
+                                <i class="bi bi-whatsapp me-1"></i> Beli
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUK 3: LILIN AROMA TERAPI -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 product-card border-0 rounded-3 overflow-hidden shadow-sm">
+                    <span class="position-absolute top-0 start-0 bg-info text-white px-3 py-1 m-3 rounded-pill small fw-semibold shadow-sm">Produk Kreatif</span>
+                    <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Lilin Aroma Terapi" style="height: 220px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column p-4">
+                        <span class="text-success fw-bold small text-uppercase mb-1">Kerajinan Tangan</span>
+                        <h5 class="card-title fw-bold text-dark mb-2">Lilin Aroma Terapi</h5>
+                        <p class="card-text text-muted flex-grow-1 small">Lilin aromaterapi handmade khas Gunung Cilik dengan wangi menenangkan. Cocok untuk meredakan stres, rileksasi, dan dekorasi ruangan.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <div>
+                                <span class="text-muted d-block small">Harga / Pcs</span>
+                                <span class="fw-bold text-success fs-5">Rp 15.000</span>
+                            </div>
+                            <a href="https://wa.me/6281294202728?text=Halo%20Admin%20Omah%20Karya%20Gunung%20Cilik,%20saya%20ingin%20membeli%20Lilin%20Aroma%20Terapi." target="_blank" class="btn btn-greeny rounded-pill px-3 btn-sm">
                                 <i class="bi bi-whatsapp me-1"></i> Beli
                             </a>
                         </div>
@@ -336,8 +327,8 @@
     </main>
 
 
-  <!-- SECTION PETA FULL-WIDTH (TEPAT DI ATAS FOOTER) -->
-    <section class="w-100 overflow-hidden shadow-sm" style="height: 350px;">
+    <!-- MAPS LOKASI -->
+    <section class="w-100 overflow-hidden shadow-sm" id="lokasi" style="height: 350px;">
         <iframe 
             src="https://maps.google.com/maps?q=-7.793000,110.507774&hl=id&z=15&output=embed" 
             width="100%" 
@@ -349,67 +340,56 @@
     </section>
 
 
-    <!-- FOOTER LAYOUT (STYLE GREENY) -->
+    <!-- FOOTER -->
     <footer class="bg-white text-dark py-5 border-top">
         <div class="container">
             <div class="row g-4">
                 
-                <!-- KOLOM 1: PRODUCTS -->
                 <div class="col-12 col-md-6 col-lg-3">
-                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">PRODUCTS</h5>
+                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">PRODUK KAMI</h5>
                     <ul class="list-unstyled text-muted small lh-lg">
-                        <li><a href="#katalog" class="text-secondary text-decoration-none hover-green">PUPUK ORGANIK PADAT</a></li>
-                        <li><a href="#katalog" class="text-secondary text-decoration-none hover-green">PUPUK ORGANIK CAIR</a></li>
-                        <li><a href="#katalog" class="text-secondary text-decoration-none hover-green">LILIN AROMA TERAPI</a></li>
+                        <li><a href="#katalog" class="text-secondary text-decoration-none">Pupuk Organik Cair (POC)</a></li>
+                        <li><a href="#katalog" class="text-secondary text-decoration-none">Pupuk Organik Padat</a></li>
+                        <li><a href="#katalog" class="text-secondary text-decoration-none">Lilin Aroma Terapi</a></li>
                     </ul>
                 </div>
 
-                <!-- KOLOM 2: SUPPORT -->
                 <div class="col-12 col-md-6 col-lg-3">
-                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">SUPPORT</h5>
+                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">LOKASI PRODUKSI</h5>
+                    <p class="text-muted small lh-lg">
+                        Padukuhan Gunung Cilik,<br>
+                        Kalurahan Sambirejo, Kapanewon Prambanan,<br>
+                        Kabupaten Sleman, D.I. Yogyakarta.
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">KOLABORASI</h5>
                     <ul class="list-unstyled text-muted small lh-lg">
-                        <li><a href="#" class="text-secondary text-decoration-none hover-green">How to order</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none hover-green">How to pay</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none hover-green">About us</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none hover-green">Contact us</a></li>
+                        <li>Warga Padukuhan Gunung Cilik</li>
+                        <li>Pemerintah Kalurahan Sambirejo</li>
+                        <li>Tim KKN-PPM UGM Prabaswara</li>
                     </ul>
                 </div>
 
-                <!-- KOLOM 3: COMMUNITY -->
                 <div class="col-12 col-md-6 col-lg-3">
-                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">COMMUNITY</h5>
-                    <ul class="list-unstyled text-muted small lh-lg">
-                        <li><a href="#" class="text-secondary text-decoration-none hover-green">Forum</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none hover-green">FAQ</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none hover-green">Kegiatan KKN</a></li>
-                    </ul>
-                </div>
-
-                <!-- KOLOM 4: INFORMASI KALURAHAN & KONTAK -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <h5 class="serif-title fw-bold text-uppercase mb-3" style="font-size: 1.05rem; letter-spacing: 1px; color: #222;">KALURAHAN SAMBIREJO</h5>
+                    <h5 class="serif-title fw-bold text-uppercase mb-3" style="font-size: 1.05rem; letter-spacing: 1px; color: #222;">KONTAK UMKM</h5>
                     
-                    <!-- Nomor Kontak -->
                     <p class="mb-2 text-dark fs-6 fw-semibold">
                         <a href="https://wa.me/6281294202728" target="_blank" class="text-dark text-decoration-none">
                             <i class="bi bi-whatsapp me-1 text-success"></i> 081294202728
                         </a>
                     </p>
 
-                    <!-- Instagram Handle -->
                     <p class="mb-3">
                         <a href="https://instagram.com/kalurahansambirejo" target="_blank" class="text-secondary text-decoration-none small">
                             <i class="bi bi-instagram me-1 text-danger"></i> @kalurahansambirejo
                         </a>
                     </p>
 
-                    <!-- Social Media Buttons -->
                     <div class="d-flex gap-2">
                         <a href="https://facebook.com" target="_blank" class="btn btn-sm text-white rounded-1 px-2 py-1" style="background-color: #3b5998;">
                             <i class="bi bi-facebook"></i>
-                        </a>
-                        <a href="https://x.com" target="_blank" class="btn btn-sm text-white rounded-1 px-2 py-1" style="background-color: #000000;">
-                            <i class="bi bi-twitter-x"></i>
                         </a>
                         <a href="https://instagram.com/kalurahansambirejo" target="_blank" class="btn btn-sm text-white rounded-1 px-2 py-1" style="background-color: #c13584;">
                             <i class="bi bi-instagram"></i>
@@ -419,9 +399,13 @@
 
             </div>
             
-            <!-- COPYRIGHT -->
             <div class="text-center text-muted small mt-5 pt-3 border-top">
-                &copy; 2026 Kalurahan Sambirejo. Hak Cipta Dilindungi.
+                &copy; 2026 Omah Karya Gunung Cilik - Kalurahan Sambirejo. Inisiasi Program KKN-PPM UGM.
             </div>
         </div>
     </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
