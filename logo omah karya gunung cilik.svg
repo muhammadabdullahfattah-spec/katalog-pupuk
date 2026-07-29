@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradasi Hijau Alam (Organik) -->
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2ecc71"/>
+      <stop offset="100%" stop-color="#15a05c"/>
+    </linearGradient>
+
+    <!-- Gradasi Keemasan (Lilin Aromaterapi & Kehangatan) -->
+    <linearGradient id="goldGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#f39c12"/>
+      <stop offset="100%" stop-color="#f1c40f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Lingkaran Bingkai Luar -->
+  <circle cx="250" cy="250" r="230" fill="#ffffff" stroke="#e8f5e9" stroke-width="8"/>
+  <circle cx="250" cy="250" r="215" fill="none" stroke="#15a05c" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- Siluet Bukit (Gunung Cilik) -->
+  <path d="M 120 330 Q 250 220 380 330 Z" fill="#e8f5e9" opacity="0.6"/>
+  <path d="M 80 350 Q 250 230 420 350 Z" fill="url(#greenGrad)" opacity="0.15"/>
+
+  <!-- Atap Rumah Minimalis (Omah) -->
+  <path d="M 140 250 L 250 160 L 360 250" fill="none" stroke="#15a05c" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Simbol Gabungan Daun (Pupuk) & Nyala Api (Lilin Aromaterapi) -->
+  <!-- Nyala Api Lilin -->
+  <path d="M 250 205 C 238 230 238 248 250 265 C 262 248 262 230 250 205 Z" fill="url(#goldGrad)"/>
+  <!-- Daun Organik Kiri & Kanan -->
+  <path d="M 245 260 C 215 245 205 215 220 190 C 232 212 240 240 245 260 Z" fill="#15a05c"/>
+  <path d="M 255 260 C 285 245 295 215 280 190 C 268 212 260 240 255 260 Z" fill="#2ecc71"/>
+
+  <!-- Teks Brand -->
+  <text x="250" y="375" font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="700" font-size="30" fill="#1b4332" text-anchor="middle" letter-spacing="3">OMAH KARYA</text>
+  <text x="250" y="405" font-family="'Playfair Display', Georgia, serif" font-weight="600" font-size="18" fill="#d35400" text-anchor="middle" letter-spacing="4">GUNUNG CILIK</text>
+  <text x="250" y="428" font-family="'Poppins', sans-serif" font-weight="400" font-size="11" fill="#7f8c8d" text-anchor="middle" letter-spacing="2">SAMBIREJO • PRAMBANAN</text>
+</svg>
