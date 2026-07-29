@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Pupuk Kita - Greeny Agriculture</title>
+    <title>Toko Pupuk Kita - Sambirejo</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,18 @@
             text-decoration: underline;
         }
 
-        /* Gambar Ornamen Tepi (Hiasan Tanaman/Sayur) */
+        /* Style khusus untuk Gambar Logo di Navbar */
+        .nav-logo-img {
+            height: 42px;
+            width: auto;
+            object-fit: contain;
+            background-color: #ffffff;
+            padding: 2px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Gambar Ornaments Tepi */
         .decor-img {
             position: absolute;
             z-index: 1;
@@ -114,18 +125,18 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-greeny sticky-top py-2 shadow-sm">
         <div class="container">
             
-            <!-- LOGO AREA: 3 GAMBAR PENGGANTI GREENY + 1 GAMBAR DISAMPINGNYA -->
+            <!-- LOGO AREA: 3 LOGO PENGGANTI GREENY + 1 LOGO SAMBIREJO DI SAMPING -->
             <a class="navbar-brand d-flex align-items-center gap-2 me-4" href="#">
-                <!-- 3 Gambar Menggantikan Tulisan 'Greeny' -->
-                <img src="https://via.placeholder.com/40x40/ffffff/15a05c?text=G1" alt="Greeny Logo 1" class="rounded img-fluid" style="height: 38px;">
-                <img src="https://via.placeholder.com/40x40/ffffff/15a05c?text=G2" alt="Greeny Logo 2" class="rounded img-fluid" style="height: 38px;">
-                <img src="https://via.placeholder.com/40x40/ffffff/15a05c?text=G3" alt="Greeny Logo 3" class="rounded img-fluid" style="height: 38px;">
+                <!-- 3 Logo Utama -->
+                <img src="logo-univ.jpg" alt="Logo UGM" class="nav-logo-img">
+                <img src="logo-kknn.jpg" alt="Logo KKN PPM UGM" class="nav-logo-img">
+                <img src="logo-prabaswara.jpg" alt="Logo Prabaswara" class="nav-logo-img">
                 
                 <!-- Pembatas / Separator -->
-                <span class="text-white-50 px-1">|</span>
+                <span class="text-white-50 fs-5 px-1">|</span>
                 
-                <!-- 1 Gambar Tambahan di Samping -->
-                <img src="https://via.placeholder.com/110x38/ffffff/15a05c?text=Samping" alt="Gambar Samping" class="rounded img-fluid" style="height: 38px;">
+                <!-- 1 Logo Tambahan di Samping -->
+                <img src="logo-sambi.jpg" alt="Logo Sambirejo Gumregah" class="nav-logo-img">
             </a>
 
             <!-- Tombol Toggle Mobile -->
@@ -168,10 +179,10 @@
     </nav>
 
 
-    <!-- HERO SECTION LAYOUT (SESUAI GAMBAR GREENY) -->
+    <!-- HERO SECTION LAYOUT (DESAIN GREENY) -->
     <section class="position-relative py-5 overflow-hidden">
         
-        <!-- Gambar Hiasan Tepi (Kubis Left, Mentimun Right, Tomat Left Bottom) -->
+        <!-- Gambar Hiasan Tepi -->
         <img src="https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?auto=format&fit=crop&w=300&q=80" alt="Cabbage" class="decor-img decor-cabbage d-none d-xl-block">
         <img src="https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?auto=format&fit=crop&w=300&q=80" alt="Cucumber" class="decor-img decor-cucumber d-none d-xl-block">
         <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=300&q=80" alt="Tomato" class="decor-img decor-tomato d-none d-xl-block">
@@ -181,7 +192,7 @@
             <!-- Judul Utama -->
             <h1 class="serif-title display-4 fw-normal mb-3">Delivery Fresh directly to your hand</h1>
             <p class="text-muted mx-auto mb-5" style="max-width: 750px; font-size: 0.95rem; line-height: 1.6;">
-                Integer fringilla erat fermentum orci lacinia, et malesuada sapien dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin id ex vel dolor accumsan rutrum a ullamcorper purus.
+                Solusi pupuk terbaik dan nutrisi tanaman berkualitas tinggi langsung untuk memajukan sektor pertanian lokal Desa Sambirejo.
             </p>
 
             <!-- 3 Langkah Proses (Plant, Online Store, Delivery) -->
@@ -196,7 +207,7 @@
                         <span class="step-num bg-orange">1</span>
                         <h5 class="serif-title fw-bold mb-2">Plant</h5>
                         <p class="small text-muted" style="font-size: 0.8rem;">
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            Pilihlah pupuk yang sesuai dengan jenis tanaman untuk hasil panen yang optimal.
                         </p>
                     </div>
                 </div>
@@ -210,7 +221,7 @@
                         <span class="step-num bg-green-step">2</span>
                         <h5 class="serif-title fw-bold mb-2" style="color: var(--primary-green);">Online Store</h5>
                         <p class="small text-muted" style="font-size: 0.8rem;">
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            Pesan pupuk dan kebutuhan pertanian dengan mudah secara langsung melalui katalog online.
                         </p>
                     </div>
                 </div>
@@ -224,7 +235,7 @@
                         <span class="step-num bg-lime">3</span>
                         <h5 class="serif-title fw-bold mb-2" style="color: #8bc34a;">Delivery</h5>
                         <p class="small text-muted" style="font-size: 0.8rem;">
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            Produk siap diantar langsung ke tempat Anda secara cepat dan terjamin aman.
                         </p>
                     </div>
                 </div>
@@ -235,7 +246,7 @@
             <div class="mt-5 pt-4">
                 <h2 class="serif-title fw-normal mb-3">Best quality farm bring better products</h2>
                 <p class="text-muted mx-auto mb-4" style="max-width: 800px; font-size: 0.88rem; line-height: 1.6;">
-                    Vivamus dictum velit quam, id porttitor odio vulputate id. Suspendisse egestas imperdiet erat, at blandit lacus convallis a. Praesent sit amet nunc augue.
+                    Komitmen kami menyajikan produk pendukung pertanian terbaik untuk mewujudkan Sambirejo yang subur, guyup rukun, dan migunani.
                 </p>
                 <!-- Banner Pemandangan Sawah -->
                 <div class="mx-auto overflow-hidden rounded-3 shadow-sm" style="max-width: 650px;">
@@ -247,7 +258,7 @@
     </section>
 
 
-    <!-- KATALOG PRODUK (TOKO PUPUK KITA) -->
+    <!-- KATALOG PRODUK -->
     <main class="container my-5 py-4 border-top" id="katalog">
         <div class="text-center mb-5">
             <h2 class="serif-title fw-bold">Katalog Produk Terlengkap</h2>
@@ -328,8 +339,8 @@
     <!-- FOOTER -->
     <footer class="bg-dark text-white-50 text-center py-4 border-top border-secondary">
         <div class="container">
-            <p class="mb-1">&copy; 2026 Toko Pupuk Kita. Hak Cipta Dilindungi.</p>
-            <small>Dibuat dengan <i class="bi bi-heart-fill text-danger"></i> untuk Petani Indonesia</small>
+            <p class="mb-1">&copy; 2026 KKN-PPM UGM Sambirejo. Hak Cipta Dilindungi.</p>
+            <small>Dibuat dengan <i class="bi bi-heart-fill text-danger"></i> untuk Petani Desa Sambirejo</small>
         </div>
     </footer>
 
