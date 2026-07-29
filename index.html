@@ -3,97 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Pupuk Kita - Katalog Produk Terlengkap</title>
+    <title>Toko Pupuk Kita - Greeny Agriculture</title>
+    
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons (Untuk ikon pelengkap) -->
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Google Fonts untuk Tampilan Serif Elegan -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary-green: #2e7d32;
-            --light-green: #edf7ed;
+            --primary-green: #15a05c;
+            --dark-green: #0d7341;
+            --light-bg: #ffffff;
         }
-        .bg-gradient-green {
-            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #555;
+            background-color: #ffffff;
+            overflow-x: hidden;
         }
-        .btn-green {
-            background-color: var(--primary-green);
+
+        .serif-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #333333;
+        }
+
+        .bg-greeny {
+            background-color: var(--primary-green) !important;
+        }
+
+        /* Styling Navbar */
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-size: 0.88rem;
+            font-weight: 500;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffffff !important;
+            text-decoration: underline;
+        }
+
+        /* Gambar Ornamen Tepi (Hiasan Tanaman/Sayur) */
+        .decor-img {
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .decor-cabbage {
+            top: 40px;
+            left: -10px;
+            width: 210px;
+        }
+        .decor-cucumber {
+            top: 120px;
+            right: -10px;
+            width: 170px;
+        }
+        .decor-tomato {
+            top: 450px;
+            left: 20px;
+            width: 150px;
+        }
+
+        /* Icon & Angka 3 Langkah */
+        .step-num {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
             color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 8px;
         }
-        .btn-green:hover {
-            background-color: #1b5e20;
-            color: white;
-        }
+
+        .bg-orange { background-color: #f39c12; }
+        .bg-green-step { background-color: #2ecc71; }
+        .bg-lime { background-color: #8bc34a; }
+
+        /* Card Produk */
         .product-card {
             transition: transform 0.2s, box-shadow 0.2s;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #eeeeee;
         }
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
         }
-        .product-img {
-            height: 200px;
-            object-fit: cover;
-            background-color: #f5f5f5;
+        .btn-greeny {
+            background-color: var(--primary-green);
+            color: white;
+        }
+        .btn-greeny:hover {
+            background-color: var(--dark-green);
+            color: white;
         }
     </style>
 </head>
-<body class="bg-light">
+<body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-green sticky-top shadow-sm">
+    <!-- NAVBAR UTAMA -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-greeny sticky-top py-2 shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
-                <i class="bi bi-tree-fill me-2"></i>Toko Pupuk Kita
+            
+            <!-- LOGO AREA: 3 GAMBAR PENGGANTI GREENY + 1 GAMBAR DISAMPINGNYA -->
+            <a class="navbar-brand d-flex align-items-center gap-2 me-4" href="#">
+                <!-- 3 Gambar Menggantikan Tulisan 'Greeny' -->
+                <img src="https://via.placeholder.com/40x40/ffffff/15a05c?text=G1" alt="Greeny Logo 1" class="rounded img-fluid" style="height: 38px;">
+                <img src="https://via.placeholder.com/40x40/ffffff/15a05c?text=G2" alt="Greeny Logo 2" class="rounded img-fluid" style="height: 38px;">
+                <img src="https://via.placeholder.com/40x40/ffffff/15a05c?text=G3" alt="Greeny Logo 3" class="rounded img-fluid" style="height: 38px;">
+                
+                <!-- Pembatas / Separator -->
+                <span class="text-white-50 px-1">|</span>
+                
+                <!-- 1 Gambar Tambahan di Samping -->
+                <img src="https://via.placeholder.com/110x38/ffffff/15a05c?text=Samping" alt="Gambar Samping" class="rounded img-fluid" style="height: 38px;">
             </a>
-            <span class="navbar-text text-white-50 d-none d-md-block">
-                Solusi Pertanian Subur & Makmur
-            </span>
+
+            <!-- Tombol Toggle Mobile -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigasi Menu & Pencarian -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active rounded-pill px-3 py-1 bg-white text-dark fw-bold me-2" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Product</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Pupuk Organik</a></li>
+                            <li><a class="dropdown-item" href="#">Pupuk Anorganik</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">How to pay</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">How to order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">More</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-search"></i></a>
+                    </li>
+                </ul>
+
+                <!-- Right Menu: Wishlist & Cart -->
+                <div class="d-flex align-items-center gap-3 text-white fs-7">
+                    <a href="#" class="text-white text-decoration-none small">
+                        <i class="bi bi-heart me-1"></i> Wishlist
+                    </a>
+                    <a href="#" class="text-white text-decoration-none small">
+                        <i class="bi bi-cart me-1"></i> Cart <span class="badge bg-dark rounded-circle ms-1">0</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <header class="py-5 mb-5 bg-gradient-green text-white text-center position-relative overflow-hidden">
-        <div class="container position-relative z-1 py-4">
-            <h1 class="display-4 fw-bold mb-3">Katalog Pupuk Berkualitas Tinggi</h1>
-            <p class="lead mb-4 text-white-50">Tingkatkan hasil panen Anda dengan pilihan pupuk organik dan non-organik terbaik.</p>
-            <a href="#katalog" class="btn btn-light btn-lg px-4 fw-semibold text-success shadow-sm">Lihat Produk</a>
-        </div>
-        <!-- Ornamen estetik di background -->
-        <div class="position-absolute top-50 start-50 translate-middle text-white opacity-25" style="font-size: 20rem; z-index: 0; pointer-events: none;">
-            <i class="bi bi-flower1"></i>
-        </div>
-    </header>
 
-    <!-- UTAMA: KATALOG PRODUK -->
-    <main class="container mb-5" id="katalog">
+    <!-- HERO SECTION LAYOUT (SESUAI GAMBAR GREENY) -->
+    <section class="position-relative py-5 overflow-hidden">
+        
+        <!-- Gambar Hiasan Tepi (Kubis Left, Mentimun Right, Tomat Left Bottom) -->
+        <img src="https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?auto=format&fit=crop&w=300&q=80" alt="Cabbage" class="decor-img decor-cabbage d-none d-xl-block">
+        <img src="https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?auto=format&fit=crop&w=300&q=80" alt="Cucumber" class="decor-img decor-cucumber d-none d-xl-block">
+        <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=300&q=80" alt="Tomato" class="decor-img decor-tomato d-none d-xl-block">
+
+        <div class="container text-center position-relative z-2 my-3">
+            
+            <!-- Judul Utama -->
+            <h1 class="serif-title display-4 fw-normal mb-3">Delivery Fresh directly to your hand</h1>
+            <p class="text-muted mx-auto mb-5" style="max-width: 750px; font-size: 0.95rem; line-height: 1.6;">
+                Integer fringilla erat fermentum orci lacinia, et malesuada sapien dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin id ex vel dolor accumsan rutrum a ullamcorper purus.
+            </p>
+
+            <!-- 3 Langkah Proses (Plant, Online Store, Delivery) -->
+            <div class="row g-4 justify-content-center mt-2 mb-5">
+                
+                <!-- Step 1: Plant -->
+                <div class="col-12 col-md-4" style="max-width: 280px;">
+                    <div class="mb-2">
+                        <i class="bi bi-flower2 text-warning fs-1"></i>
+                    </div>
+                    <div>
+                        <span class="step-num bg-orange">1</span>
+                        <h5 class="serif-title fw-bold mb-2">Plant</h5>
+                        <p class="small text-muted" style="font-size: 0.8rem;">
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2: Online Store -->
+                <div class="col-12 col-md-4" style="max-width: 280px;">
+                    <div class="mb-2">
+                        <i class="bi bi-cart3 text-success fs-1"></i>
+                    </div>
+                    <div>
+                        <span class="step-num bg-green-step">2</span>
+                        <h5 class="serif-title fw-bold mb-2" style="color: var(--primary-green);">Online Store</h5>
+                        <p class="small text-muted" style="font-size: 0.8rem;">
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3: Delivery -->
+                <div class="col-12 col-md-4" style="max-width: 280px;">
+                    <div class="mb-2">
+                        <i class="bi bi-truck text-info fs-1"></i>
+                    </div>
+                    <div>
+                        <span class="step-num bg-lime">3</span>
+                        <h5 class="serif-title fw-bold mb-2" style="color: #8bc34a;">Delivery</h5>
+                        <p class="small text-muted" style="font-size: 0.8rem;">
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bagian Fitur Tambahan: Best Quality Farm -->
+            <div class="mt-5 pt-4">
+                <h2 class="serif-title fw-normal mb-3">Best quality farm bring better products</h2>
+                <p class="text-muted mx-auto mb-4" style="max-width: 800px; font-size: 0.88rem; line-height: 1.6;">
+                    Vivamus dictum velit quam, id porttitor odio vulputate id. Suspendisse egestas imperdiet erat, at blandit lacus convallis a. Praesent sit amet nunc augue.
+                </p>
+                <!-- Banner Pemandangan Sawah -->
+                <div class="mx-auto overflow-hidden rounded-3 shadow-sm" style="max-width: 650px;">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80" alt="Farm Landscape" class="img-fluid w-100" style="max-height: 250px; object-fit: cover;">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- KATALOG PRODUK (TOKO PUPUK KITA) -->
+    <main class="container my-5 py-4 border-top" id="katalog">
         <div class="text-center mb-5">
-            <h2 class="fw-bold text-dark">Produk Unggulan Kami</h2>
-            <p class="text-muted">Pilih jenis pupuk yang sesuai dengan kebutuhan tanaman Anda</p>
-            <hr class="mx-auto" style="width: 60px; height: 3px; background-color: var(--primary-green); opacity: 1;">
+            <h2 class="serif-title fw-bold">Katalog Produk Terlengkap</h2>
+            <p class="text-muted">Pilih jenis pupuk berkualitas untuk menunjang pertanian Anda</p>
+            <hr class="mx-auto" style="width: 50px; height: 3px; background-color: var(--primary-green); opacity: 1;">
         </div>
 
         <div class="row g-4">
             
             <!-- PRODUK 1 -->
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm product-card border-0 rounded-3 overflow-hidden">
-                    <!-- Badge Kategori -->
-                    <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 m-3 rounded-pill fs-7 fw-semibold shadow-sm">Terlaris</span>
-                    <!-- Gambar Produk (Menggunakan placeholder alam/tanaman dari Unsplash) -->
-                    <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=500&q=80" class="card-img-top product-img" alt="Pupuk NPK">
+                <div class="card h-100 product-card border-0 rounded-3 overflow-hidden">
+                    <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 m-3 rounded-pill small fw-semibold shadow-sm">Terlaris</span>
+                    <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Pupuk NPK" style="height: 200px; object-fit: cover;">
                     <div class="card-body d-flex flex-column p-4">
                         <span class="text-success fw-bold small text-uppercase mb-1">Pupuk Kimia</span>
                         <h5 class="card-title fw-bold text-dark mb-2">Pupuk NPK 16-16-16</h5>
-                        <p class="card-text text-muted flex-grow-1 fs-6">Pupuk majemuk seimbang untuk memicu pertumbuhan optimal pada tanaman padi, jagung, dan hortikultura.</p>
+                        <p class="card-text text-muted flex-grow-1 small">Pupuk majemuk seimbang untuk memicu pertumbuhan optimal pada tanaman padi dan hortikultura.</p>
                         <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
                             <div>
                                 <span class="text-muted d-block small">Harga / Karung</span>
                                 <span class="fw-bold text-success fs-5">Rp 175.000</span>
                             </div>
-                            <a href="https://wa.me/628123456789?text=Halo%20Toko%20Pupuk%20Kita,%20saya%20mau%20tanya%20Pupuk%20NPK" target="_blank" class="btn btn-green rounded-pill px-3">
-                                <i class="bi bi-whatsapp me-2"></i>Beli
+                            <a href="https://wa.me/628123456789" target="_blank" class="btn btn-greeny rounded-pill px-3 btn-sm">
+                                <i class="bi bi-whatsapp me-1"></i> Beli
                             </a>
                         </div>
                     </div>
@@ -102,40 +281,40 @@
 
             <!-- PRODUK 2 -->
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm product-card border-0 rounded-3 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=500&q=80" class="card-img-top product-img" alt="Pupuk Organik">
+                <div class="card h-100 product-card border-0 rounded-3 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Pupuk Organik" style="height: 200px; object-fit: cover;">
                     <div class="card-body d-flex flex-column p-4">
                         <span class="text-success fw-bold small text-uppercase mb-1">Pupuk Organik</span>
                         <h5 class="card-title fw-bold text-dark mb-2">Pupuk Organik Cair (POC)</h5>
-                        <p class="card-text text-muted flex-grow-1 fs-6">Nutrisi cair alami untuk memperbaiki struktur tanah mikro, merangsang akar, dan aman bagi lingkungan.</p>
+                        <p class="card-text text-muted flex-grow-1 small">Nutrisi cair alami untuk memperbaiki struktur tanah mikro dan merangsang pertumbuhan akar.</p>
                         <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
                             <div>
                                 <span class="text-muted d-block small">Harga / Botol</span>
                                 <span class="fw-bold text-success fs-5">Rp 45.000</span>
                             </div>
-                            <a href="https://wa.me/628123456789?text=Halo%20Toko%20Pupuk%20Kita,%20saya%20mau%20tanya%20Pupuk%20Organik%20Cair" target="_blank" class="btn btn-green rounded-pill px-3">
-                                <i class="bi bi-whatsapp me-2"></i>Beli
+                            <a href="https://wa.me/628123456789" target="_blank" class="btn btn-greeny rounded-pill px-3 btn-sm">
+                                <i class="bi bi-whatsapp me-1"></i> Beli
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- PRODUK 3 (Tambahan contoh produk baru) -->
+            <!-- PRODUK 3 -->
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm product-card border-0 rounded-3 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=500&q=80" class="card-img-top product-img" alt="Pupuk Kompos">
+                <div class="card h-100 product-card border-0 rounded-3 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Pupuk Kompos" style="height: 200px; object-fit: cover;">
                     <div class="card-body d-flex flex-column p-4">
                         <span class="text-success fw-bold small text-uppercase mb-1">Pupuk Organik</span>
                         <h5 class="card-title fw-bold text-dark mb-2">Super Kompos Matang</h5>
-                        <p class="card-text text-muted flex-grow-1 fs-6">Kompos murni siap pakai hasil fermentasi alami. Sangat baik untuk media tanam pot rumah tangga maupun kebun luas.</p>
+                        <p class="card-text text-muted flex-grow-1 small">Kompos murni siap pakai hasil fermentasi alami, sangat baik untuk media tanam pot maupun kebun.</p>
                         <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
                             <div>
                                 <span class="text-muted d-block small">Harga / Karung</span>
                                 <span class="fw-bold text-success fs-5">Rp 25.000</span>
                             </div>
-                            <a href="https://wa.me/628123456789?text=Halo%20Toko%20Pupuk%20Kita,%20saya%20mau%20tanya%20Super%20Kompos" target="_blank" class="btn btn-green rounded-pill px-3">
-                                <i class="bi bi-whatsapp me-2"></i>Beli
+                            <a href="https://wa.me/628123456789" target="_blank" class="btn btn-greeny rounded-pill px-3 btn-sm">
+                                <i class="bi bi-whatsapp me-1"></i> Beli
                             </a>
                         </div>
                     </div>
@@ -144,6 +323,7 @@
 
         </div>
     </main>
+
 
     <!-- FOOTER -->
     <footer class="bg-dark text-white-50 text-center py-4 border-top border-secondary">
