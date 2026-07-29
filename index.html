@@ -336,14 +336,27 @@
     </main>
 
 
-   <!-- FOOTER LAYOUT (STYLE GREENY) -->
-    <footer class="bg-white text-dark py-5 border-top mt-5">
+  <!-- SECTION PETA FULL-WIDTH (TEPAT DI ATAS FOOTER) -->
+    <section class="w-100 overflow-hidden shadow-sm" style="height: 350px;">
+        <iframe 
+            src="https://maps.google.com/maps?q=-7.793000,110.507774&hl=id&z=15&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </section>
+
+
+    <!-- FOOTER LAYOUT (STYLE GREENY) -->
+    <footer class="bg-white text-dark py-5 border-top">
         <div class="container">
             <div class="row g-4">
                 
                 <!-- KOLOM 1: PRODUCTS -->
                 <div class="col-12 col-md-6 col-lg-3">
-                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 1rem; letter-spacing: 1px; color: #333;">PRODUCTS</h5>
+                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">PRODUCTS</h5>
                     <ul class="list-unstyled text-muted small lh-lg">
                         <li><a href="#katalog" class="text-secondary text-decoration-none hover-green">PUPUK ORGANIK PADAT</a></li>
                         <li><a href="#katalog" class="text-secondary text-decoration-none hover-green">PUPUK ORGANIK CAIR</a></li>
@@ -353,7 +366,7 @@
 
                 <!-- KOLOM 2: SUPPORT -->
                 <div class="col-12 col-md-6 col-lg-3">
-                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 1rem; letter-spacing: 1px; color: #333;">SUPPORT</h5>
+                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">SUPPORT</h5>
                     <ul class="list-unstyled text-muted small lh-lg">
                         <li><a href="#" class="text-secondary text-decoration-none hover-green">How to order</a></li>
                         <li><a href="#" class="text-secondary text-decoration-none hover-green">How to pay</a></li>
@@ -364,7 +377,7 @@
 
                 <!-- KOLOM 3: COMMUNITY -->
                 <div class="col-12 col-md-6 col-lg-3">
-                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 1rem; letter-spacing: 1px; color: #333;">COMMUNITY</h5>
+                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">COMMUNITY</h5>
                     <ul class="list-unstyled text-muted small lh-lg">
                         <li><a href="#" class="text-secondary text-decoration-none hover-green">Forum</a></li>
                         <li><a href="#" class="text-secondary text-decoration-none hover-green">FAQ</a></li>
@@ -372,47 +385,35 @@
                     </ul>
                 </div>
 
-                <!-- KOLOM 4: INFO KONTAK & MAPS -->
+                <!-- KOLOM 4: INFORMASI KALURAHAN & KONTAK -->
                 <div class="col-12 col-md-6 col-lg-3">
-                    <h5 class="serif-title fw-bold text-uppercase mb-2" style="font-size: 1.1rem; letter-spacing: 1px; color: #222;">KALURAHAN SAMBIREJO</h5>
+                    <h5 class="serif-title fw-bold text-uppercase mb-3" style="font-size: 1.05rem; letter-spacing: 1px; color: #222;">KALURAHAN SAMBIREJO</h5>
                     
                     <!-- Nomor Kontak -->
-                    <p class="mb-1 text-dark fs-6 fw-semibold">
+                    <p class="mb-2 text-dark fs-6 fw-semibold">
                         <a href="https://wa.me/6281294202728" target="_blank" class="text-dark text-decoration-none">
-                            <i class="bi bi-telephone-fill me-1 text-success"></i> 081294202728
+                            <i class="bi bi-whatsapp me-1 text-success"></i> 081294202728
                         </a>
                     </p>
 
-                    <!-- Instagram -->
+                    <!-- Instagram Handle -->
                     <p class="mb-3">
                         <a href="https://instagram.com/kalurahansambirejo" target="_blank" class="text-secondary text-decoration-none small">
                             <i class="bi bi-instagram me-1 text-danger"></i> @kalurahansambirejo
                         </a>
                     </p>
 
-                    <!-- Social Icons (Facebook, X, Instagram) -->
-                    <div class="d-flex gap-1 mb-3">
-                        <a href="https://facebook.com" target="_blank" class="btn btn-sm btn-primary rounded-1 px-2 py-1" style="background-color: #3b5998; border: none;">
+                    <!-- Social Media Buttons -->
+                    <div class="d-flex gap-2">
+                        <a href="https://facebook.com" target="_blank" class="btn btn-sm text-white rounded-1 px-2 py-1" style="background-color: #3b5998;">
                             <i class="bi bi-facebook"></i>
                         </a>
-                        <a href="https://x.com" target="_blank" class="btn btn-sm btn-info text-white rounded-1 px-2 py-1" style="background-color: #000000; border: none;">
+                        <a href="https://x.com" target="_blank" class="btn btn-sm text-white rounded-1 px-2 py-1" style="background-color: #000000;">
                             <i class="bi bi-twitter-x"></i>
                         </a>
-                        <a href="https://instagram.com/kalurahansambirejo" target="_blank" class="btn btn-sm btn-danger rounded-1 px-2 py-1" style="background-color: #c13584; border: none;">
+                        <a href="https://instagram.com/kalurahansambirejo" target="_blank" class="btn btn-sm text-white rounded-1 px-2 py-1" style="background-color: #c13584;">
                             <i class="bi bi-instagram"></i>
                         </a>
-                    </div>
-
-                    <!-- Embed Google Maps Lokasi (-7.793000, 110.507774) -->
-                    <div class="rounded overflow-hidden border shadow-sm" style="height: 140px; max-width: 220px;">
-                        <iframe 
-                            src="https://maps.google.com/maps?q=-7.793000,110.507774&hl=id&z=15&output=embed" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy">
-                        </iframe>
                     </div>
                 </div>
 
