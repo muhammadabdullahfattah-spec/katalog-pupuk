@@ -9,14 +9,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <!-- Google Fonts untuk Tampilan Modern & Serif Elegan -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
             --primary-green: #15a05c;
             --dark-green: #0d7341;
-            --light-bg: #ffffff;
+            --light-bg: #f8f9fa;
         }
 
         body {
@@ -38,10 +38,10 @@
         /* Styling Navbar */
         .navbar-nav .nav-link {
             color: rgba(255, 255, 255, 0.9) !important;
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             font-weight: 500;
-            padding-left: 12px;
-            padding-right: 12px;
+            padding-left: 14px;
+            padding-right: 14px;
         }
 
         .navbar-nav .nav-link:hover {
@@ -49,15 +49,13 @@
             text-decoration: underline;
         }
 
-        /* Style Gambar Logo di Navbar */
-        .nav-logo-img {
-            height: 40px;
+        /* Logo Brand di Navbar */
+        .nav-brand-logo {
+            height: 38px;
             width: auto;
-            object-fit: contain;
-            background-color: #ffffff;
-            padding: 2px;
             border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+            padding: 3px;
         }
 
         /* Gambar Ornament Tepi Decorative */
@@ -119,24 +117,31 @@
             background-color: var(--dark-green);
             color: white;
         }
+
+        /* Styling Logo Instansi Mitra */
+        .partner-logo {
+            max-height: 55px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(20%);
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR UTAMA -->
+    <!-- NAVBAR UTAMA (BERSIH & FOKUS BRAND) -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-greeny sticky-top py-2 shadow-sm">
         <div class="container">
             
-            <!-- BRAND & LOGO AREA -->
-            <a class="navbar-brand d-flex align-items-center gap-2 me-4" href="#">
-                <img src="logo-univ.jpg" alt="Logo UGM" class="nav-logo-img">
-                <img src="logo-kknn.jpg" alt="Logo KKN PPM UGM" class="nav-logo-img">
-                <img src="logo-prabaswara.jpg" alt="Logo Prabaswara" class="nav-logo-img">
-                
-                <span class="text-white-50 fs-5 px-1">|</span>
-                
-                <img src="logo-sambi.jpg" alt="Logo Sambirejo" class="nav-logo-img">
-                <span class="fw-bold fs-6 text-white ms-1 d-none d-sm-inline-block">Omah Karya</span>
+            <!-- BRAND UTAMA -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="logo-sambi.jpg" alt="Logo Sambirejo" class="nav-brand-logo">
+                <span class="fw-bold fs-5 text-white tracking-wide">Omah Karya <span class="fw-normal fs-6 opacity-75">Gunung Cilik</span></span>
             </a>
 
             <!-- Tombol Mobile Toggle -->
@@ -146,9 +151,9 @@
 
             <!-- Navigasi Menu -->
             <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center ms-lg-3">
                     <li class="nav-item">
-                        <a class="nav-link active rounded-pill px-3 py-1 bg-white text-dark fw-bold me-2" href="#">Beranda</a>
+                        <a class="nav-link active fw-bold" href="#">Beranda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#katalog">Katalog Produk</a>
@@ -162,8 +167,8 @@
                 </ul>
 
                 <!-- Tag Wilayah -->
-                <div class="d-flex align-items-center text-white small bg-black bg-opacity-10 px-3 py-1 rounded-pill">
-                    <i class="bi bi-geo-alt-fill me-1 text-warning"></i> Padukuhan Gunung Cilik
+                <div class="d-flex align-items-center text-white small bg-black bg-opacity-10 px-3 py-1 rounded-pill ms-auto">
+                    <i class="bi bi-geo-alt-fill me-1 text-warning"></i> Gunung Cilik, Sambirejo
                 </div>
             </div>
         </div>
@@ -340,8 +345,36 @@
     </section>
 
 
+    <!-- SECTION MITRA KOLABORASI & SPONSOR LOGO (LOKASI LOGO INSTANSI) -->
+    <section class="py-5 bg-light border-top border-bottom">
+        <div class="container text-center">
+            <span class="text-uppercase text-muted fw-semibold small tracking-wider d-block mb-2">Program Pemberdayaan & Kolaborasi</span>
+            <h5 class="serif-title fw-bold text-dark mb-4">Dipersembahkan Oleh</h5>
+            
+            <div class="row align-items-center justify-content-center g-4">
+                <div class="col-6 col-sm-3 col-md-2">
+                    <img src="logo-univ.jpg" alt="Logo UGM" class="partner-logo img-fluid" title="Universitas Gadjah Mada">
+                </div>
+                <div class="col-6 col-sm-3 col-md-2">
+                    <img src="logo-kknn.jpg" alt="Logo KKN PPM UGM" class="partner-logo img-fluid" title="KKN-PPM UGM">
+                </div>
+                <div class="col-6 col-sm-3 col-md-2">
+                    <img src="logo-prabaswara.jpg" alt="Logo Subunit Prabaswara" class="partner-logo img-fluid" title="Tim Prabaswara">
+                </div>
+                <div class="col-6 col-sm-3 col-md-2">
+                    <img src="logo-sambi.jpg" alt="Logo Kalurahan Sambirejo" class="partner-logo img-fluid" title="Kalurahan Sambirejo">
+                </div>
+            </div>
+            
+            <p class="text-muted small mt-4 mb-0" style="font-size: 0.82rem;">
+                Sinergi Warga Padukuhan Gunung Cilik, Kalurahan Sambirejo bersama Tim KKN-PPM UGM
+            </p>
+        </div>
+    </section>
+
+
     <!-- FOOTER -->
-    <footer class="bg-white text-dark py-5 border-top">
+    <footer class="bg-white text-dark py-5">
         <div class="container">
             <div class="row g-4">
                 
