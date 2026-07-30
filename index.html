@@ -116,18 +116,19 @@
             background-color: var(--dark-green);
             color: white;
         }
-
-        /* Styling Logo Instansi Mitra */
+/* Styling Logo Instansi Mitra (Transparan & Ukuran Besar) */
         .partner-logo {
-            max-height: 55px;
+            max-height: 85px;               /* Ukuran logo diperbesar */
             width: auto;
             object-fit: contain;
-            filter: grayscale(20%);
+            background-color: transparent;  /* Latar transparan */
+            mix-blend-mode: multiply;       /* Menyamarkan kotak putih bawaan file gambar */
+            filter: grayscale(10%);
             transition: filter 0.3s ease, transform 0.3s ease;
         }
         .partner-logo:hover {
             filter: grayscale(0%);
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
     </style>
 </head>
@@ -361,7 +362,9 @@
             <div class="col-6 col-sm-3 col-md-3">
                 <img src="logo prabaswara.png" alt="Logo Subunit Prabaswara" class="partner-logo img-fluid" style="max-height: 85px;" title="Tim Prabaswara">
             </div>
-        
+            <div class="col-6 col-sm-3 col-md-3">
+                <img src="logo sambi.pngG" alt="Logo Kalurahan Sambirejo" class="partner-logo img-fluid" title="Kalurahan Sambirejo">
+            </div>
         </div>
         
         <p class="text-muted small mt-4 mb-0" style="font-size: 0.82rem;">
