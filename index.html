@@ -63,42 +63,13 @@
     --color-border: #e5e7eb;
     --color-border-hover: #d1d5db;
     
-    /* Muted Palette (Warna yang lebih tenang & elegan) */
-    --accent-amber: #d97706;     /* Muted Amber menggantikan Orange terang */
-    --accent-emerald: #059669;   /* Deep Emerald menggantikan Green terang */
-    --accent-sage: #65a30d;      /* Muted Sage menggantikan Lime terang */
+    /* Muted Palette (Warna yang tenang & elegan) */
+    --accent-amber: #d97706;     
+    --accent-emerald: #059669;   
+    --accent-sage: #65a30d;      
     
     /* Subtle Shadow */
-    --shadow-card-hover: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
-}
-
-/* ==========================================================================
-   DECORATIVE ELEMENTS (SUBTLE & NON-INTRUSIVE)
-   ========================================================================== */
-.decor-img {
-    position: absolute;
-    z-index: 1;
-    pointer-events: none;
-    opacity: 0.35; /* Diturunkan agar fokus tetap pada konten utama */
-    filter: grayscale(10%); /* Memperhalus tampilan gambar dekoratif */
-}
-
-.decor-cabbage {
-    top: 40px;
-    left: -10px;
-    width: 170px;
-}
-
-.decor-cucumber {
-    top: 120px;
-    right: -10px;
-    width: 140px;
-}
-
-.decor-tomato {
-    top: 450px;
-    left: 20px;
-    width: 120px;
+    --shadow-card-hover: 0 8px 16px -4px rgba(0, 0, 0, 0.05);
 }
 
 /* ==========================================================================
@@ -131,7 +102,7 @@
 }
 
 .product-card:hover {
-    transform: translateY(-3px); /* Pergerakan lebih halus (bukan -6px) */
+    transform: translateY(-3px);
     border-color: var(--color-border-hover);
     box-shadow: var(--shadow-card-hover) !important;
 }
