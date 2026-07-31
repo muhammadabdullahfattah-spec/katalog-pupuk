@@ -70,9 +70,7 @@
             padding: 0;
         }
 
-        /* ==========================================================================
-           HERO BACKGROUND SECTION (BERSIH & ELEGAN)
-           ========================================================================== */
+        /* HERO BACKGROUND SECTION */
         .hero-bg {
             position: relative;
             background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.95)), url('hero-bg.jpg');
@@ -81,9 +79,7 @@
             background-repeat: no-repeat;
         }
 
-        /* ==========================================================================
-           STEP INDICATOR
-           ========================================================================== */
+        /* STEP INDICATOR */
         .step-num {
             width: 28px;
             height: 28px;
@@ -101,9 +97,7 @@
         .bg-green-step { background-color: var(--accent-emerald); }
         .bg-lime { background-color: var(--accent-sage); }
 
-        /* ==========================================================================
-           PRODUCT CARD & BUTTONS
-           ========================================================================== */
+        /* PRODUCT CARD & BUTTONS */
         .product-card {
             border: 1px solid var(--color-border);
             background-color: #ffffff;
@@ -132,7 +126,7 @@
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
         }
 
-        /* Styling Logo Instansi Mitra */
+        /* Logo Instansi Mitra */
         .partner-logo {
             max-height: 85px;
             width: auto;
@@ -146,6 +140,19 @@
         .partner-logo:hover {
             filter: grayscale(0%);
             transform: scale(1.08);
+        }
+
+        /* ==========================================================================
+           PEMAKSAAN RATA KIRI PADA FOOTER
+           ========================================================================== */
+        footer, 
+        footer h5, 
+        footer p, 
+        footer ul, 
+        footer li, 
+        footer div,
+        footer a {
+            text-align: left !important;
         }
     </style>
 </head>
@@ -435,57 +442,58 @@
     </section>
 
 
-    <!-- FOOTER -->
-    <footer class="bg-white text-dark py-5">
-        <div class="container">
-            <div class="row g-4">
+    <!-- FOOTER LENGKAP RATA KIRI MUTLAK -->
+    <footer class="bg-white text-dark py-5 text-start">
+        <div class="container text-start">
+            <div class="row g-4 text-start">
                 
+                <!-- Kolom 1 -->
                 <div class="col-12 col-md-6 col-lg-3 text-start">
-                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">PRODUK KAMI</h5>
-                    <ul class="list-unstyled text-muted small lh-lg">
-                        <li><a href="#katalog" class="text-secondary text-decoration-none">Pupuk Organik Cair (POC)</a></li>
-                        <li><a href="#katalog" class="text-secondary text-decoration-none">Pupuk Organik Padat</a></li>
-                        <li><a href="#katalog" class="text-secondary text-decoration-none">Lilin Aroma Terapi</a></li>
+                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3 text-start" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">PRODUK KAMI</h5>
+                    <ul class="list-unstyled text-muted small lh-lg text-start ps-0">
+                        <li class="text-start"><a href="#katalog" class="text-secondary text-decoration-none">Pupuk Organik Cair (POC)</a></li>
+                        <li class="text-start"><a href="#katalog" class="text-secondary text-decoration-none">Pupuk Organik Padat</a></li>
+                        <li class="text-start"><a href="#katalog" class="text-secondary text-decoration-none">Lilin Aroma Terapi</a></li>
                     </ul>
                 </div>
 
+                <!-- Kolom 2 -->
                 <div class="col-12 col-md-6 col-lg-3 text-start">
-                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">LOKASI PRODUKSI</h5>
-                    <p class="text-muted small lh-lg">
+                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3 text-start" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">LOKASI PRODUKSI</h5>
+                    <p class="text-muted small lh-lg text-start">
                         Padukuhan Gunung Cilik,<br>
                         Kalurahan Sambirejo, Kapanewon Prambanan,<br>
                         Kabupaten Sleman, D.I. Yogyakarta.
                     </p>
                 </div>
 
+                <!-- Kolom 3 -->
                 <div class="col-12 col-md-6 col-lg-3 text-start">
-                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">KOLABORASI</h5>
-                    <ul class="list-unstyled text-muted small lh-lg">
-                        <li>Warga Padukuhan Gunung Cilik</li>
-                        <li>Pemerintah Kalurahan Sambirejo</li>
-                        <li>Tim KKN-PPM UGM Prabaswara</li>
+                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3 text-start" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">KOLABORASI</h5>
+                    <ul class="list-unstyled text-muted small lh-lg text-start ps-0">
+                        <li class="text-start">Warga Padukuhan Gunung Cilik</li>
+                        <li class="text-start">Pemerintah Kalurahan Sambirejo</li>
+                        <li class="text-start">Tim KKN-PPM UGM Prabaswara</li>
                     </ul>
                 </div>
 
+                <!-- Kolom 4 -->
                 <div class="col-12 col-md-6 col-lg-3 text-start">
-                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">KONTAK UMKM</h5>
+                    <h5 class="serif-title fw-bold text-uppercase border-bottom pb-2 mb-3 text-start" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">KONTAK UMKM</h5>
                     
-                    <div class="d-flex flex-column gap-3">
-                        <!-- WhatsApp -->
-                        <a href="https://wa.me/6281294202728" target="_blank" class="text-dark text-decoration-none d-flex align-items-center gap-2">
-                            <i class="bi bi-whatsapp text-success fs-5 text-center" style="width: 24px;"></i>
+                    <div class="d-flex flex-column gap-3 text-start">
+                        <a href="https://wa.me/6281294202728" target="_blank" class="text-dark text-decoration-none d-flex align-items-center gap-2 justify-content-start">
+                            <i class="bi bi-whatsapp text-success fs-5"></i>
                             <span class="fw-semibold">081294202728</span>
                         </a>
 
-                        <!-- Instagram 1 -->
-                        <a href="https://www.instagram.com/kalurahansambirejo" target="_blank" class="text-secondary text-decoration-none d-flex align-items-center gap-2 small">
-                            <i class="bi bi-instagram text-danger fs-5 text-center" style="width: 24px;"></i>
+                        <a href="https://www.instagram.com/kalurahansambirejo" target="_blank" class="text-secondary text-decoration-none d-flex align-items-center gap-2 small justify-content-start">
+                            <i class="bi bi-instagram text-danger fs-5"></i>
                             <span>@kalurahansambirejo</span>
                         </a>
 
-                        <!-- Instagram 2 -->
-                        <a href="https://instagram.com/prabaswara.prambanan" target="_blank" class="text-secondary text-decoration-none d-flex align-items-center gap-2 small">
-                            <i class="bi bi-instagram text-danger fs-5 text-center" style="width: 24px;"></i>
+                        <a href="https://instagram.com/prabaswara.prambanan" target="_blank" class="text-secondary text-decoration-none d-flex align-items-center gap-2 small justify-content-start">
+                            <i class="bi bi-instagram text-danger fs-5"></i>
                             <span>@prabaswara.prambanan</span>
                         </a>
                     </div>
