@@ -55,8 +55,9 @@
             text-decoration: underline;
         }
 
+        /* Ukuran Logo Navbar Diperbesar (Semula 34px -> 48px) */
         .nav-brand-logo {
-            height: 34px;
+            height: 48px;
             width: auto;
         }
 
@@ -121,8 +122,13 @@
             filter: grayscale(10%);
             transition: filter 0.3s ease, transform 0.3s ease;
         }
+
+        /* Khusus Logo Sambirejo Dibuat Lebih Besar */
+        .partner-logo-sambi {
+            max-height: 90px;
+        }
         
-        .partner-logo:hover {
+        .partner-logo:hover, .partner-logo-sambi:hover {
             filter: grayscale(0%);
             transform: scale(1.05);
         }
@@ -131,6 +137,10 @@
            ATURAN OPTIMASI KHUSUS TAMPILAN HP / MOBILE (MAX-WIDTH: 576px)
            ======================================================== */
         @media (max-width: 576px) {
+            .nav-brand-logo {
+                height: 40px !important;
+            }
+
             .hero-title-responsive {
                 font-size: 1.8rem !important;
                 line-height: 1.3 !important;
@@ -152,6 +162,10 @@
                 max-height: 50px !important;
             }
 
+            .partner-logo-sambi {
+                max-height: 65px !important;
+            }
+
             section, main {
                 padding-top: 2rem !important;
                 padding-bottom: 2rem !important;
@@ -170,7 +184,7 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2" href="#">
                 <img src="logo omah karya gunung cilik.svg" alt="Logo Sambirejo" class="nav-brand-logo">
-                <span class="fw-bold fs-6 fs-md-5 text-white">Omah Karya <span class="fw-normal fs-6 opacity-75 d-none d-sm-inline">Gunung Cilik</span></span>
+                <span class="fw-bold fs-5 text-white">Omah Karya <span class="fw-normal fs-6 opacity-75 d-none d-sm-inline">Gunung Cilik</span></span>
             </a>
 
             <button class="navbar-toggler border-0 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
@@ -282,7 +296,7 @@
         </div>
     </section>
 
-    <!-- KATALOG PRODUK UTAMA (TANPA BACKGROUND ABU-ABU PADA FOTO) -->
+    <!-- KATALOG PRODUK UTAMA -->
     <main class="container my-4 my-md-5 py-3 py-md-4 border-top" id="katalog">
         <div class="text-center mb-4 mb-md-5">
             <h2 class="serif-title fw-bold fs-3 fs-md-2">Katalog Produk Utama</h2>
@@ -295,7 +309,6 @@
             <!-- PRODUK 1: POC -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card border-0 rounded-3 overflow-hidden shadow-sm h-100 d-flex flex-column product-card">
-                    <!-- BACKGROUND DIBUAT TRANSPARAN -->
                     <div class="card-img-holder position-relative bg-transparent d-flex align-items-center justify-content-center" style="height: 220px;">
                         <span class="position-absolute top-0 start-0 z-1 m-2 m-md-3 badge rounded-pill bg-success text-white px-3 py-1 small fw-semibold shadow-sm">Organik Alami</span>
                         <img src="pocccc.png" class="img-fluid p-2" alt="Pupuk Organik Cair" style="max-height: 100%; object-fit: contain;">
@@ -322,7 +335,6 @@
             <!-- PRODUK 2: PUPUK PADAT -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card border-0 rounded-3 overflow-hidden shadow-sm h-100 d-flex flex-column product-card">
-                    <!-- BACKGROUND DIBUAT TRANSPARAN -->
                     <div class="card-img-holder position-relative bg-transparent d-flex align-items-center justify-content-center" style="height: 220px;">
                         <span class="position-absolute top-0 start-0 z-1 m-2 m-md-3 badge rounded-pill bg-warning text-dark px-3 py-1 small fw-semibold shadow-sm">Best Seller</span>
                         <img src="pupuk padat.png" class="img-fluid p-2" alt="Pupuk Organik Padat" style="max-height: 100%; object-fit: contain;">
@@ -349,7 +361,6 @@
             <!-- PRODUK 3: LILIN AROMA TERAPI -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card border-0 rounded-3 overflow-hidden shadow-sm h-100 d-flex flex-column product-card">
-                    <!-- BACKGROUND DIBUAT TRANSPARAN -->
                     <div class="card-img-holder position-relative bg-transparent d-flex align-items-center justify-content-center" style="height: 220px;">
                         <span class="position-absolute top-0 start-0 z-1 m-2 m-md-3 badge rounded-pill bg-info text-white px-3 py-1 small fw-semibold shadow-sm">Produk Kreatif</span>
                         <img src="lilin.png" class="img-fluid p-2" alt="Lilin Aroma Terapi" style="max-height: 100%; object-fit: contain;">
@@ -407,7 +418,8 @@
                     <img src="logo prabaswara.png" alt="Logo Subunit Prabaswara" class="partner-logo img-fluid" title="Tim Prabaswara">
                 </div>
                 <div class="col-6 col-sm-3">
-                    <img src="logo sambi.png" alt="Logo Kalurahan Sambirejo" class="partner-logo img-fluid" title="Kalurahan Sambirejo">
+                    <!-- LOGO KALURAHAN SAMBIREJO DIPERBESAR -->
+                    <img src="logo sambi.png" alt="Logo Kalurahan Sambirejo" class="partner-logo partner-logo-sambi img-fluid" title="Kalurahan Sambirejo">
                 </div>
             </div>
             
