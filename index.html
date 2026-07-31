@@ -13,10 +13,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
+        /* ==========================================================================
+           DESIGN VARIABLES (FORMAL & MINIMALIST)
+           ========================================================================== */
         :root {
             --primary-green: #15a05c;
             --dark-green: #0d7341;
             --light-bg: #f8f9fa;
+
+            --color-border: #e5e7eb;
+            --color-border-hover: #d1d5db;
+            
+            /* Muted Palette */
+            --accent-amber: #d97706;     
+            --accent-emerald: #059669;   
+            --accent-sage: #65a30d;      
+            
+            /* Subtle Shadow */
+            --shadow-card-hover: 0 8px 16px -4px rgba(0, 0, 0, 0.05);
         }
 
         body {
@@ -36,102 +50,100 @@
         }
 
         /* Styling Navbar */
-.navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.9) !important;
-    font-size: 0.9rem;
-    font-weight: 500;
-    padding-left: 14px;
-    padding-right: 14px;
-}
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding-left: 14px;
+            padding-right: 14px;
+        }
 
-.navbar-nav .nav-link:hover {
-    color: #ffffff !important;
-    text-decoration: underline;
-}
+        .navbar-nav .nav-link:hover {
+            color: #ffffff !important;
+            text-decoration: underline;
+        }
 
-/* Logo Brand di Navbar (Sudah Disesuaikan) */
-.nav-brand-logo {
-    height: 38px;
-    width: auto;
-    background-color: transparent; /* Mengubah background jadi transparan */
-    padding: 0;                    /* Menghapus jarak putih di dalam kotak */
-}
-/* ==========================================================================
-   DESIGN VARIABLES (FORMAL & MINIMALIST)
-   ========================================================================== */
-:root {
-    --color-border: #e5e7eb;
-    --color-border-hover: #d1d5db;
-    
-    /* Muted Palette (Warna yang tenang & elegan) */
-    --accent-amber: #d97706;     
-    --accent-emerald: #059669;   
-    --accent-sage: #65a30d;      
-    
-    /* Subtle Shadow */
-    --shadow-card-hover: 0 8px 16px -4px rgba(0, 0, 0, 0.05);
-}
+        .nav-brand-logo {
+            height: 38px;
+            width: auto;
+            background-color: transparent;
+            padding: 0;
+        }
 
-/* ==========================================================================
-   STEP INDICATOR
-   ========================================================================== */
-.step-num {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    color: #ffffff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
+        /* ==========================================================================
+           HERO BACKGROUND SECTION (BERSIH & ELEGAN)
+           ========================================================================== */
+        .hero-bg {
+            position: relative;
+            /* Ganti 'hero-bg.jpg' dengan file gambar latar (sapi/buah/pertanian) Anda */
+            background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.95)), url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
-.bg-orange { background-color: var(--accent-amber); }
-.bg-green-step { background-color: var(--accent-emerald); }
-.bg-lime { background-color: var(--accent-sage); }
+        /* ==========================================================================
+           STEP INDICATOR
+           ========================================================================== */
+        .step-num {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
 
-/* ==========================================================================
-   PRODUCT CARD & BUTTONS
-   ========================================================================== */
-.product-card {
-    border: 1px solid var(--color-border);
-    background-color: #ffffff;
-    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
+        .bg-orange { background-color: var(--accent-amber); }
+        .bg-green-step { background-color: var(--accent-emerald); }
+        .bg-lime { background-color: var(--accent-sage); }
 
-.product-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--color-border-hover);
-    box-shadow: var(--shadow-card-hover) !important;
-}
+        /* ==========================================================================
+           PRODUCT CARD & BUTTONS
+           ========================================================================== */
+        .product-card {
+            border: 1px solid var(--color-border);
+            background-color: #ffffff;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
 
-.btn-greeny {
-    background-color: var(--primary-green);
-    color: #ffffff;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    border: 1px solid transparent;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
+        .product-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--color-border-hover);
+            box-shadow: var(--shadow-card-hover) !important;
+        }
 
-.btn-greeny:hover,
-.btn-greeny:focus {
-    background-color: var(--dark-green);
-    color: #ffffff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
-/* Styling Logo Instansi Mitra (Transparan & Ukuran Besar) */
+        .btn-greeny {
+            background-color: var(--primary-green);
+            color: #ffffff;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            border: 1px solid transparent;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-greeny:hover,
+        .btn-greeny:focus {
+            background-color: var(--dark-green);
+            color: #ffffff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Styling Logo Instansi Mitra */
         .partner-logo {
-            max-height: 85px;               /* Ukuran logo diperbesar */
+            max-height: 85px;
             width: auto;
             object-fit: contain;
-            background-color: transparent;  /* Latar transparan */
-            mix-blend-mode: multiply;       /* Menyamarkan kotak putih bawaan file gambar */
+            background-color: transparent;
+            mix-blend-mode: multiply;
             filter: grayscale(10%);
             transition: filter 0.3s ease, transform 0.3s ease;
         }
+        
         .partner-logo:hover {
             filter: grayscale(0%);
             transform: scale(1.08);
@@ -140,7 +152,7 @@
 </head>
 <body>
 
-    <!-- NAVBAR UTAMA (BERSIH & FOKUS BRAND) -->
+    <!-- NAVBAR UTAMA -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-greeny sticky-top py-2 shadow-sm">
         <div class="container">
             
@@ -182,13 +194,7 @@
 
 
     <!-- HERO SECTION -->
-    <section class="position-relative py-5 overflow-hidden">
-        
-        <!-- Hiasan Samping -->
-        <img src="https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?auto=format&fit=crop&w=300&q=80" alt="Cabbage" class="decor-img decor-cabbage d-none d-xl-block">
-        <img src="https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?auto=format&fit=crop&w=300&q=80" alt="Cucumber" class="decor-img decor-cucumber d-none d-xl-block">
-        <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=300&q=80" alt="Tomato" class="decor-img decor-tomato d-none d-xl-block">
-
+    <section class="position-relative py-5 overflow-hidden hero-bg">
         <div class="container text-center position-relative z-2 my-3">
             
             <!-- Tagline Badge -->
@@ -258,7 +264,7 @@
     </section>
 
 
-    <!-- KATALOG PRODUK FOKUS (3 PRODUK) -->
+    <!-- KATALOG PRODUK UTAMA -->
     <main class="container my-5 py-4 border-top" id="katalog">
         <div class="text-center mb-5">
             <h2 class="serif-title fw-bold">Katalog Produk Utama</h2>
@@ -267,117 +273,92 @@
         </div>
 
         <div class="row g-4 justify-content-center">
-            
-          <div class="row g-4 justify-content-center">
 
-    <div class="row g-4 justify-content-center">
-
-    <!-- PRODUK 1: POC -->
-    <div class="col-12 col-md-6 col-lg-4">
-        <!-- Tambahkan class d-flex flex-column h-100 pada kartu -->
-        <div class="card border-0 rounded-3 overflow-hidden shadow-sm h-100 d-flex flex-column product-card">
-            
-            <!-- Staging area seragam untuk area gambar -->
-            <div class="card-img-holder position-relative bg-light" style="height: 220px;">
-                <!-- Badge diletakkan di pojok container -->
-                <span class="position-absolute top-0 start-0 z-1 m-3 badge rounded-pill bg-success text-white px-3 py-1 small fw-semibold shadow-sm">Organik Alami</span>
-                <!-- Container flex dalam dengan padding seragam untuk memusatkan gambar 'contain' -->
-                <div class="d-flex align-items-center justify-content-center h-100 p-3">
-                    <img src="pocccc.png" class="card-img-top" alt="Pupuk Organik Cair" style="max-height: 100%; width: auto; object-fit: contain;">
-                </div>
-            </div>
-
-            <!-- Tambahkan class d-flex flex-column p-4 flex-grow-1 pada body kartu -->
-            <div class="card-body d-flex flex-column p-4 flex-grow-1">
-                <span class="text-success fw-bold small text-uppercase mb-1">Pertanian Organik</span>
-                <h5 class="card-title fw-bold text-dark mb-2">Pupuk Organik Cair (POC)</h5>
-                <p class="card-text text-muted flex-grow-1 small">Nutrisi cair kaya mikronutrien dari hasil fermentasi alami. Membantu mempercepat pembungaan, memperkuat akar, dan menjaga kesuburan tanah.</p>
-                
-                <!-- Area footer didorong ke bawah dengan d-flex d-flex justify-content-between align-items-center -->
-                <div class="mt-auto pt-3 border-top card-footer-flex">
-                    <div>
-                        <span class="text-muted d-block small">Kemasan / Botol</span>
-                        <span class="fw-bold text-success fs-5">Rp 25.000</span>
+            <!-- PRODUK 1: POC -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 rounded-3 overflow-hidden shadow-sm h-100 d-flex flex-column product-card">
+                    <div class="card-img-holder position-relative bg-light" style="height: 220px;">
+                        <span class="position-absolute top-0 start-0 z-1 m-3 badge rounded-pill bg-success text-white px-3 py-1 small fw-semibold shadow-sm">Organik Alami</span>
+                        <div class="d-flex align-items-center justify-content-center h-100 p-3">
+                            <img src="pocccc.png" class="card-img-top" alt="Pupuk Organik Cair" style="max-height: 100%; width: auto; object-fit: contain;">
+                        </div>
                     </div>
-                    <a href="https://wa.me/6281294202728?text=Halo%20Admin%20Omah%20Karya%20Gunung%20Cilik,%20saya%20ingin%20membeli%20Pupuk%20Organik%20Cair%20(POC)." target="_blank" class="btn btn-greeny rounded-pill px-3 btn-sm align-self-center">
-                        <i class="bi bi-whatsapp me-1"></i> Beli
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- PRODUK 2: PUPUK PADAT -->
-    <div class="col-12 col-md-6 col-lg-4">
-        <!-- Tambahkan class d-flex flex-column h-100 pada kartu -->
-        <div class="card border-0 rounded-3 overflow-hidden shadow-sm h-100 d-flex flex-column product-card">
-            
-            <!-- Staging area seragam untuk area gambar -->
-            <div class="card-img-holder position-relative bg-light" style="height: 220px;">
-                <!-- Badge diletakkan di pojok container -->
-                <span class="position-absolute top-0 start-0 z-1 m-3 badge rounded-pill bg-warning text-dark px-3 py-1 small fw-semibold shadow-sm">Best Seller</span>
-                <!-- Container flex dalam dengan padding seragam untuk memusatkan gambar 'contain' -->
-                <div class="d-flex align-items-center justify-content-center h-100 p-3">
-                    <img src="pupuk padat.png" class="card-img-top" alt="Pupuk Organik Padat" style="max-height: 100%; width: auto; object-fit: contain;">
-                </div>
-            </div>
-
-            <!-- Tambahkan class d-flex flex-column p-4 flex-grow-1 pada body kartu -->
-            <div class="card-body d-flex flex-column p-4 flex-grow-1">
-                <span class="text-success fw-bold small text-uppercase mb-1">Media Tanam</span>
-                <h5 class="card-title fw-bold text-dark mb-2">Pupuk Organik Padat</h5>
-                <p class="card-text text-muted flex-grow-1 small">Kompos matang siap pakai yang kaya unsur hara makro & mikro. Sangat efektif memperbaiki struktur tanah yang tandus dan menutrisi tanaman.</p>
-                
-                <!-- Area footer didorong ke bawah dengan d-flex d-flex justify-content-between align-items-center -->
-                <div class="mt-auto pt-3 border-top card-footer-flex">
-                    <div>
-                        <span class="text-muted d-block small">Kemasan / Karung</span>
-                        <span class="fw-bold text-success fs-5">Rp 20.000</span>
+                    <div class="card-body d-flex flex-column p-4 flex-grow-1">
+                        <span class="text-success fw-bold small text-uppercase mb-1">Pertanian Organik</span>
+                        <h5 class="card-title fw-bold text-dark mb-2">Pupuk Organik Cair (POC)</h5>
+                        <p class="card-text text-muted flex-grow-1 small">Nutrisi cair kaya mikronutrien dari hasil fermentasi alami. Membantu mempercepat pembungaan, memperkuat akar, dan menjaga kesuburan tanah.</p>
+                        
+                        <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-muted d-block small">Kemasan / Botol</span>
+                                <span class="fw-bold text-success fs-5">Rp 25.000</span>
+                            </div>
+                            <a href="https://wa.me/6281294202728?text=Halo%20Admin%20Omah%20Karya%20Gunung%20Cilik,%20saya%20ingin%20membeli%20Pupuk%20Organik%20Cair%20(POC)." target="_blank" class="btn btn-greeny rounded-pill px-3 btn-sm align-self-center">
+                                <i class="bi bi-whatsapp me-1"></i> Beli
+                            </a>
+                        </div>
                     </div>
-                    <a href="https://wa.me/6281294202728?text=Halo%20Admin%20Omah%20Karya%20Gunung%20Cilik,%20saya%20ingin%20membeli%20Pupuk%20Organik%20Padat." target="_blank" class="btn btn-greeny rounded-pill px-3 btn-sm align-self-center">
-                        <i class="bi bi-whatsapp me-1"></i> Beli
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- PRODUK 3: LILIN AROMA TERAPI -->
-    <div class="col-12 col-md-6 col-lg-4">
-        <!-- Tambahkan class d-flex flex-column h-100 pada kartu -->
-        <div class="card border-0 rounded-3 overflow-hidden shadow-sm h-100 d-flex flex-column product-card">
-            
-            <!-- Staging area seragam untuk area gambar -->
-            <div class="card-img-holder position-relative bg-light" style="height: 220px;">
-                <!-- Badge diletakkan di pojok container -->
-                <span class="position-absolute top-0 start-0 z-1 m-3 badge rounded-pill bg-info text-white px-3 py-1 small fw-semibold shadow-sm">Produk Kreatif</span>
-                <!-- Container flex dalam dengan padding seragam untuk memusatkan gambar 'contain' -->
-                <div class="d-flex align-items-center justify-content-center h-100 p-3">
-                    <img src="lilin.png" class="card-img-top" alt="Lilin Aroma Terapi" style="max-height: 100%; width: auto; object-fit: contain;">
                 </div>
             </div>
 
-            <!-- Tambahkan class d-flex flex-column p-4 flex-grow-1 pada body kartu -->
-            <div class="card-body d-flex flex-column p-4 flex-grow-1">
-                <span class="text-success fw-bold small text-uppercase mb-1">Kerajinan Tangan</span>
-                <h5 class="card-title fw-bold text-dark mb-2">Lilin Aroma Terapi</h5>
-                <p class="card-text text-muted flex-grow-1 small">Lilin aromaterapi handmade khas Gunung Cilik dengan wangi menenangkan. Cocok untuk meredakan stres, rileksasi, dan dekorasi ruangan.</p>
-                
-                <!-- Area footer didorong ke bawah dengan d-flex d-flex justify-content-between align-items-center -->
-                <div class="mt-auto pt-3 border-top card-footer-flex">
-                    <div>
-                        <span class="text-muted d-block small">Harga / Pcs</span>
-                        <span class="fw-bold text-success fs-5">Rp 15.000</span>
+            <!-- PRODUK 2: PUPUK PADAT -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 rounded-3 overflow-hidden shadow-sm h-100 d-flex flex-column product-card">
+                    <div class="card-img-holder position-relative bg-light" style="height: 220px;">
+                        <span class="position-absolute top-0 start-0 z-1 m-3 badge rounded-pill bg-warning text-dark px-3 py-1 small fw-semibold shadow-sm">Best Seller</span>
+                        <div class="d-flex align-items-center justify-content-center h-100 p-3">
+                            <img src="pupuk padat.png" class="card-img-top" alt="Pupuk Organik Padat" style="max-height: 100%; width: auto; object-fit: contain;">
+                        </div>
                     </div>
-                    <a href="https://wa.me/6281294202728?text=Halo%20Admin%20Omah%20Karya%20Gunung%20Cilik,%20saya%20ingin%20membeli%20Lilin%20Aroma%20Terapi." target="_blank" class="btn btn-greeny rounded-pill px-3 btn-sm align-self-center">
-                        <i class="bi bi-whatsapp me-1"></i> Beli
-                    </a>
+
+                    <div class="card-body d-flex flex-column p-4 flex-grow-1">
+                        <span class="text-success fw-bold small text-uppercase mb-1">Media Tanam</span>
+                        <h5 class="card-title fw-bold text-dark mb-2">Pupuk Organik Padat</h5>
+                        <p class="card-text text-muted flex-grow-1 small">Kompos matang siap pakai yang kaya unsur hara makro & mikro. Sangat efektif memperbaiki struktur tanah yang tandus dan menutrisi tanaman.</p>
+                        
+                        <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-muted d-block small">Kemasan / Karung</span>
+                                <span class="fw-bold text-success fs-5">Rp 20.000</span>
+                            </div>
+                            <a href="https://wa.me/6281294202728?text=Halo%20Admin%20Omah%20Karya%20Gunung%20Cilik,%20saya%20ingin%20membeli%20Pupuk%20Organik%20Padat." target="_blank" class="btn btn-greeny rounded-pill px-3 btn-sm align-self-center">
+                                <i class="bi bi-whatsapp me-1"></i> Beli
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-</div>
+            <!-- PRODUK 3: LILIN AROMA TERAPI -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 rounded-3 overflow-hidden shadow-sm h-100 d-flex flex-column product-card">
+                    <div class="card-img-holder position-relative bg-light" style="height: 220px;">
+                        <span class="position-absolute top-0 start-0 z-1 m-3 badge rounded-pill bg-info text-white px-3 py-1 small fw-semibold shadow-sm">Produk Kreatif</span>
+                        <div class="d-flex align-items-center justify-content-center h-100 p-3">
+                            <img src="lilin.png" class="card-img-top" alt="Lilin Aroma Terapi" style="max-height: 100%; width: auto; object-fit: contain;">
+                        </div>
+                    </div>
+
+                    <div class="card-body d-flex flex-column p-4 flex-grow-1">
+                        <span class="text-success fw-bold small text-uppercase mb-1">Kerajinan Tangan</span>
+                        <h5 class="card-title fw-bold text-dark mb-2">Lilin Aroma Terapi</h5>
+                        <p class="card-text text-muted flex-grow-1 small">Lilin aromaterapi handmade khas Gunung Cilik dengan wangi menenangkan. Cocok untuk meredakan stres, rileksasi, dan dekorasi ruangan.</p>
+                        
+                        <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-muted d-block small">Harga / Pcs</span>
+                                <span class="fw-bold text-success fs-5">Rp 15.000</span>
+                            </div>
+                            <a href="https://wa.me/6281294202728?text=Halo%20Admin%20Omah%20Karya%20Gunung%20Cilik,%20saya%20ingin%20membeli%20Lilin%20Aroma%20Terapi." target="_blank" class="btn btn-greeny rounded-pill px-3 btn-sm align-self-center">
+                                <i class="bi bi-whatsapp me-1"></i> Beli
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
 
 
@@ -394,33 +375,33 @@
     </section>
 
 
-<!-- SECTION MITRA KOLABORASI & SPONSOR LOGO (LOKASI LOGO INSTANSI) -->
-<section class="py-5 bg-light border-top border-bottom">
-    <div class="container text-center">
-        <span class="text-uppercase text-muted fw-semibold small tracking-wider d-block mb-2">Program Pemberdayaan & Kolaborasi</span>
-        <h5 class="serif-title fw-bold text-dark mb-4">Dipersembahkan Oleh</h5>
-        
-        <!-- col-md-3 digunakan agar 4 logo memenuhi lebar kontainer dengan seimbang -->
-        <div class="row align-items-center justify-content-center g-4">
-            <div class="col-6 col-sm-3 col-md-3">
-                <img src="logo univ.png" alt="Logo UGM" class="partner-logo img-fluid" style="max-height: 85px;" title="Universitas Gadjah Mada">
+    <!-- SECTION MITRA KOLABORASI -->
+    <section class="py-5 bg-light border-top border-bottom">
+        <div class="container text-center">
+            <span class="text-uppercase text-muted fw-semibold small tracking-wider d-block mb-2">Program Pemberdayaan & Kolaborasi</span>
+            <h5 class="serif-title fw-bold text-dark mb-4">Dipersembahkan Oleh</h5>
+            
+            <div class="row align-items-center justify-content-center g-4">
+                <div class="col-6 col-sm-3 col-md-3">
+                    <img src="logo univ.png" alt="Logo UGM" class="partner-logo img-fluid" style="max-height: 85px;" title="Universitas Gadjah Mada">
+                </div>
+                <div class="col-6 col-sm-3 col-md-3">
+                    <img src="logo kknn copy.png" alt="Logo KKN PPM UGM" class="partner-logo img-fluid" style="max-height: 85px;" title="KKN-PPM UGM">
+                </div>
+                <div class="col-6 col-sm-3 col-md-3">
+                    <img src="logo prabaswara.png" alt="Logo Subunit Prabaswara" class="partner-logo img-fluid" style="max-height: 85px;" title="Tim Prabaswara">
+                </div>
+                <div class="col-6 col-sm-3 col-md-3">
+                    <img src="logo sambi.png" alt="Logo Kalurahan Sambirejo" class="partner-logo img-fluid" style="max-height: 85px;" title="Kalurahan Sambirejo">
+                </div>
             </div>
-            <div class="col-6 col-sm-3 col-md-3">
-                <img src="logo kknn copy.png" alt="Logo KKN PPM UGM" class="partner-logo img-fluid" style="max-height: 85px;" title="KKN-PPM UGM">
-            </div>
-            <div class="col-6 col-sm-3 col-md-3">
-                <img src="logo prabaswara.png" alt="Logo Subunit Prabaswara" class="partner-logo img-fluid" style="max-height: 85px;" title="Tim Prabaswara">
-            </div>
-            <div class="col-6 col-sm-3 col-md-3">
-                <img src="logo sambi.png" alt="Logo Kalurahan Sambirejo" class="partner-logo img-fluid" title="Kalurahan Sambirejo">
-            </div>
+            
+            <p class="text-muted small mt-4 mb-0" style="font-size: 0.82rem;">
+                Sinergi Warga Padukuhan Gunung Cilik, Kalurahan Sambirejo bersama Tim KKN-PPM UGM
+            </p>
         </div>
-        
-        <p class="text-muted small mt-4 mb-0" style="font-size: 0.82rem;">
-            Sinergi Warga Padukuhan Gunung Cilik, Kalurahan Sambirejo bersama Tim KKN-PPM UGM
-        </p>
-    </div>
-</section>
+    </section>
+
 
     <!-- FOOTER -->
     <footer class="bg-white text-dark py-5">
@@ -453,8 +434,9 @@
                         <li>Tim KKN-PPM UGM Prabaswara</li>
                     </ul>
                 </div>
-<div class="col-12 col-md-6 col-lg-3">
-                    <h5 class="serif-title fw-bold text-uppercase mb-3" style="font-size: 1.05rem; letter-spacing: 1px; color: #222;">KONTAK UMKM</h5>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="serif-title fw-bold text-uppercase mb-3" style="font-size: 0.95rem; letter-spacing: 1px; color: #333;">KONTAK UMKM</h5>
                     
                     <p class="mb-2 text-dark fs-6 fw-semibold">
                         <a href="https://wa.me/6281294202728" target="_blank" class="text-dark text-decoration-none">
@@ -486,6 +468,8 @@
                         </a>
                     </div>
                 </div>
+
+            </div>
             
             <div class="text-center text-muted small mt-5 pt-3 border-top">
                 &copy; 2026 Omah Karya Gunung Cilik - Kalurahan Sambirejo. Inisiasi Program KKN-PPM UGM.
